@@ -1,0 +1,74 @@
+header { 
+  background: url('http://www.smokelong.com/images/holderness38.jpg');
+  background-position: 50% 23%;
+  background-size: cover;
+  border-radius: 20px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+body {
+  color: #000000;
+  font-family: 'Forum', cursive;
+  font-size: 16px;
+}
+
+.link {
+  color: #4489EB;
+}
+
+h1 {
+  -webkit-text-stroke: 1px #000000;
+  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
+  font-size: 60px;
+}
+
+h2 {
+  -webkit-text-stroke: .7px #000000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: 23px;
+  margin: -40px 0 40px 0;
+}
+
+a {
+  color: #FFFFFF;
+  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
+}
+
+img {
+  border-radius: 30px;
+  box-shadow: 0 0 0 7px #FFFFFF, 0 0 0 8.5px #000000;
+  margin: 40px 0 0 0;
+}
+
+ul {
+  background-color: #000000;
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.0025));
+  border-radius: 20px;
+  padding: 10px;
+}
+
+li {
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+article {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+  	font-size: 16px;
+  	margin: -25px 0 30px 0;
+  li {
+    display: block;
+    padding: 5px;
+  }
+}
