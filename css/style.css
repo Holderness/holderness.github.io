@@ -7,7 +7,35 @@ header {
   text-align: center;
 }
 
+.first {
+  height: 750px;
+}
+
+.projects {
+  height: 750px;
+}
+
+.contact {
+  height: 750px;
+}
+
+.header {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.footer {
+  padding-top: 100px;
+  text-align: center;
+  opacity: .3;
+}
+
+.footer-spacing {
+  padding-right: 150px;
+}
+
 body {
+  min-width: 350px;
   color: #000000;
   font-family: 'Forum', cursive;
   font-size: 16px;
@@ -16,6 +44,7 @@ body {
 .link {
   color: #4489EB;
 }
+
 
 h1 {
   -webkit-text-stroke: 1px #000000;
@@ -36,12 +65,6 @@ a {
   font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
 }
 
-img {
-  border-radius: 30px;
-  box-shadow: 0 0 0 7px #FFFFFF, 0 0 0 8.5px #000000;
-  margin: 40px 0 0 0;
-}
-
 ul {
   background-color: #000000;
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.0025));
@@ -60,7 +83,17 @@ article {
   padding: 20px;
 }
 
-@media (max-width: 500px) {
+#contact {
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .footer-spacing {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 550px) {
   h1 {
     font-size: 38px;
   }
