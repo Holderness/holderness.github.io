@@ -20,18 +20,18 @@ header {
 }
 
 .header {
-  padding-top: 200px;
+  padding-top: 100px;
   text-align: center;
 }
 
 .footer {
-  padding-top: 100px;
+  padding-top: 40px;
   text-align: center;
-  opacity: .3;
 }
 
-.footer-spacing {
-  padding-right: 150px;
+.footer-img-size {
+  height: 7%;
+  width: 7%;
 }
 
 body {
@@ -87,13 +87,7 @@ article {
   text-align: center;
 }
 
-@media (max-width: 720px) {
-  .footer-spacing {
-    padding-right: 10px;
-  }
-}
-
-@media (max-width: 550px) {
+@media (max-width: 555px) {
   h1 {
     font-size: 38px;
   }
