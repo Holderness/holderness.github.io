@@ -1,11 +1,11 @@
-header { 
-  background: url('http://www.smokelong.com/images/holderness38.jpg');
-  background-position: 50% 23%;
-  background-size: cover;
-  border-radius: 20px;
-  color: #FFFFFF;
-  text-align: center;
+body {
+  min-width: 400px;
+  color: #000000;
+  font-family: 'Forum', cursive;
+  font-size: 16px;
 }
+
+/*  slides  */
 
 .first {
   height: 750px;
@@ -20,7 +20,7 @@ header {
 }
 
 .header {
-  padding-top: 100px;
+  padding-top: 260px;
   text-align: center;
 }
 
@@ -29,20 +29,36 @@ header {
   text-align: center;
 }
 
-.footer-img-size {
-  height: 7%;
-  width: 7%;
-}
-
-body {
-  min-width: 350px;
-  color: #000000;
-  font-family: 'Forum', cursive;
-  font-size: 16px;
-}
-
 .link {
-  color: #4489EB;
+  min-width: 90px;
+  width: 90px;
+  position: absolute;
+  text-align: center;
+}
+
+.pig-image {
+  margin: 90px 0 0 -265px;
+  text-align: center;
+}
+
+.fly-pig {
+  min-width: 150px;
+  width: 300px;
+  position:absolute;
+}
+
+.fly-pig-snout {
+  min-width: 150px;
+  width: 300px;
+  position:absolute;
+}
+
+.fly-pig-tongue {
+  min-width: 150px;
+  width: 300px;
+  position:absolute;
+  overflow:hidden;
+  margin: -18px 0 0 -7px;
 }
 
 
@@ -61,41 +77,55 @@ h2 {
 }
 
 a {
-  color: #FFFFFF;
-  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
-}
-
-ul {
-  background-color: #000000;
-  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.0025));
-  border-radius: 20px;
-  padding: 10px;
-}
-
-li {
   display: inline;
-  padding: 0 10px 0 10px;
+  padding: 20px 120px 90px 15px;
 }
 
-article {
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 20px;
-}
 
-#contact {
-  text-align: center;
-}
 
-@media (max-width: 555px) {
+
+
+@media (max-width: 650px) {
   h1 {
     font-size: 38px;
   }
   h2 {
   	font-size: 16px;
   	margin: -25px 0 30px 0;
+  }
   li {
     display: block;
     padding: 5px;
+  }
+  .header {
+  padding-top: 140px;
+  }
+  .link {
+    max-width: 75px;
+    min-width:60px;
+    width: 60px;
+  }
+  a {
+    display: inline;
+    padding: 20px 75px 90px 10px;
+  }
+  .pig-image {
+    margin-left: -140px;
+  }
+  .fly-pig {
+    min-width: 150px;
+    width: 100px;
+    position: absolute;
+  }
+  .fly-pig-snout {
+    min-width: 150px;
+    width: 100px;
+    position: absolute;
+  }
+  .fly-pig-tongue {
+    min-width: 150px;
+    width: 100px;
+    margin: -9px 0 0 -3px;
+    position: absolute;
   }
 }
