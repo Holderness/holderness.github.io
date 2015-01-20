@@ -61,6 +61,12 @@ body {
   margin: -18px 0 0 -7px;
 }
 
+.fly-pig-closed-eyes {
+  min-width: 150px;
+  width: 300px;
+  position:absolute;
+  visibility: hidden;
+}
 
 h1 {
   -webkit-text-stroke: 1px #000000;

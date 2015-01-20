@@ -59,6 +59,36 @@ $(function(){
     });
   }
 
+  var blinkity = function blinkity(){
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'visible');
+    }, 800);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'hidden');
+    }, 900);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'visible');
+    }, 1100);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'hidden');
+    }, 1200);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'visible');
+    }, 7000);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'hidden');
+    }, 7100);
+  };
+        
+  $('.fly-pig-closed-eyes').each(function() {
+    var that = $(this);
+    blinkity();
+    setInterval(function() {
+      blinkity();
+    }, 10000);
+  });
+
+
    $(window).resize(function(){location.reload();});
 
 
