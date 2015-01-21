@@ -119,19 +119,21 @@ a {
     margin-left: -140px;
   }
   .fly-pig {
-    min-width: 150px;
     width: 100px;
     position: absolute;
   }
   .fly-pig-snout {
-    min-width: 150px;
     width: 100px;
     position: absolute;
   }
   .fly-pig-tongue {
-    min-width: 150px;
     width: 100px;
     margin: -9px 0 0 -3px;
     position: absolute;
+  }
+  .fly-pig-closed-eyes {
+    width: 100px;
+    position:absolute;
+    visibility: hidden;
   }
 }
