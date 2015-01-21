@@ -44,28 +44,35 @@ body {
 .fly-pig {
   min-width: 150px;
   width: 300px;
-  position:absolute;
+  position: absolute;
 }
 
 .fly-pig-snout {
   min-width: 150px;
   width: 300px;
-  position:absolute;
+  position: absolute;
 }
 
 .fly-pig-tongue {
   min-width: 150px;
   width: 300px;
-  position:absolute;
-  overflow:hidden;
+  position: absolute;
+  overflow: hidden;
   margin: -18px 0 0 -7px;
 }
 
 .fly-pig-closed-eyes {
   min-width: 150px;
   width: 300px;
-  position:absolute;
+  position: absolute;
   visibility: hidden;
+}
+
+.arrow {
+  width: 145px;
+  position: absolute;
+  margin-left: 326px;
+  margin-top: -51px;
 }
 
 h1 {
@@ -135,5 +142,11 @@ a {
     width: 100px;
     position:absolute;
     visibility: hidden;
+  }
+  .arrow {
+    width: 100px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -43px;
   }
 }
