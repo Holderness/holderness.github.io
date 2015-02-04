@@ -1,5 +1,6 @@
 $(function(){
-  if ($(window).width() < 650) {
+
+  var growLinkOnHoverMobile = function growLinkOnHover() {
     $('.link').hover(function() {
       $(this).stop(true, false).animate({
         width: "75px",
@@ -14,7 +15,9 @@ $(function(){
         marginLeft: 0
       },200);
     });
-  } else {
+  };
+
+  var growLinkOnHover = function growLinkOnHover() {
     $('.link').hover(function() {
       $(this).stop(true, false).animate({
         width: "130px",
@@ -29,9 +32,9 @@ $(function(){
         marginLeft: 0
       },200);
     });
-	}
-  
-  if ($(window).width() < 650) {
+  };
+
+  var pigTongueBlepMobile = function pigTongueBlepMobile() {
     $('.pig-image').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({
         marginTop: 0,
@@ -44,7 +47,9 @@ $(function(){
         marginLeft: -3
       }, 200);
     });
-  } else {
+  };
+
+  var pigTongueBlep = function pigTongueBlep() {
     $('.pig-image').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({
         marginTop: 0,
@@ -57,9 +62,9 @@ $(function(){
         marginLeft: -7
       }, 200);
     });
-  }
+  };
 
-  var blinkity = function blinkity(){
+  var blinkityPig = function blinkityPig(){
     setTimeout(function(){
       $('.fly-pig-closed-eyes').css('visibility', 'visible');
     }, 800);
@@ -74,22 +79,40 @@ $(function(){
     }, 1200);
     setTimeout(function(){
       $('.fly-pig-closed-eyes').css('visibility', 'visible');
+    }, 4100);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'hidden');
+    }, 4200);
+    setTimeout(function(){
+      $('.fly-pig-closed-eyes').css('visibility', 'visible');
     }, 7000);
     setTimeout(function(){
       $('.fly-pig-closed-eyes').css('visibility', 'hidden');
     }, 7100);
   };
-        
-  $('.fly-pig-closed-eyes').each(function() {
-    var that = $(this);
-    blinkity();
-    setInterval(function() {
-      blinkity();
-    }, 10000);
-  });
+
+  var blinkMyPig = function blinkMyPig() {
+    $('.fly-pig-closed-eyes').each(function() {
+      blinkityPig();
+      setInterval(function() {
+        blinkityPig();
+      }, 10000);
+    });
+  };
+
+  if ($(window).width() < 650) {
+    growLinkOnHoverMobile();
+    pigTongueBlepMobile();
+  } else {
+    growLinkOnHover();
+    pigTongueBlep();
+  }
+
+  blinkMyPig();
 
 
-   // $(window).resize(function(){location.reload();});
+  // resets animations on screen resize
+  $(window).resize(function(){location.reload();});
 
 
 });
