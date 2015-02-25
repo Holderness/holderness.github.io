@@ -20,6 +20,7 @@ var LinkListView = Backbone.View.extend({
   },
   render: function (e) {
     _.each(this.collection.models, function(link) {
+    	debugger;
       var linkItemView = new LinkItemView({model: link
     });
     this.$el.append(linkItemView.render().el);
