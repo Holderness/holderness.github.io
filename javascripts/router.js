@@ -6,9 +6,10 @@ var AppRouter = Backbone.Router.extend({
 		"*default": "list"
 	},
 	list: function(linkList) {
-		this.linkItems = new LinkList();
-		debugger;
-		this.linkListView = new LinkListView({collection: this.linkItems});
+		var linkList = linkList || "contact";
+		this.linkList = contactlinkList;
+				debugger;
+		this.linkListView = new LinkListView({collection: this.linkList});
 		$('.footer').html(this.linkListView.render().el);
 	}
 });
