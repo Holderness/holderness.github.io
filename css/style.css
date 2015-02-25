@@ -80,6 +80,15 @@ body {
   margin-top: -51px;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
+.nav li {
+  display: inline;
+}
+
+
 h1 {
   -webkit-text-stroke: 1px #000000;
   font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;

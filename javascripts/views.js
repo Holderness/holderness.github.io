@@ -13,14 +13,14 @@ var LinkItemView = Backbone.View.extend({
 });
 
 var LinkListView = Backbone.View.extend({
-  tagName: 'div',
+  el: '#nav',
   initialize: function() {
+  	debugger;
     this.collection.bind("reset", this.render, this);
     this.collection.fetch();
   },
   render: function (e) {
     _.each(this.collection.models, function(link) {
-    	debugger;
       var linkItemView = new LinkItemView({model: link
     });
     this.$el.append(linkItemView.render().el);
