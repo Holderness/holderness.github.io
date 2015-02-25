@@ -1,4 +1,4 @@
-var LinkView = Backbone.View.extend({
+var LinkItemView = Backbone.View.extend({
 	tagName: 'a',
 	className: 'link',
 	template: _.template("<img src='<%= image %>' >"),
@@ -8,5 +8,22 @@ var LinkView = Backbone.View.extend({
             .html(this.template(attributes))
             .find("img")
             .addClass("link-image");
+    return this;
 	}
+});
+
+var LinkListView = Backbone.View.extend({
+  tagName: 'div',
+  initialize: function() {
+    this.collection.bind("reset", this.render, this);
+    this.collection.fetch();
+  },
+  render: function (e) {
+    _.each(this.collection.models, function(link) {
+      var linkItemView = new LinkItemView({model: link
+    });
+    this.$el.append(linkItemView.render().el);
+    }, this);
+    return this;
+  }
 });

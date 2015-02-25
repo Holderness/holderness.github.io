@@ -18,9 +18,10 @@ var pigcaveLink = new LinkItem( {
   image: "css/images/pig-cave.png"
 });
 
+var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 
-var linkView = new LinkView({ model: githubLink });
-var linkList = new LinkList();
+// var linkView = new LinkView({ model: githubLink });
+
 
 $(function(){
 
