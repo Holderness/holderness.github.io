@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 
-.footer {
+#footer {
   padding-top: 40px;
   text-align: center;
 }
@@ -80,8 +80,20 @@ body {
   margin-top: -51px;
 }
 
+.active {
+  font-weight: 900;
+  font-size:1.3em;
+}
+
+.nav {
+  text-align: center;
+  font-size: 1.17em;
+  padding-right: 3.0em;
+}
+
 .nav a {
   text-decoration: none;
+  padding: 0 .5em 0 .5em;
 }
 
 .nav li {

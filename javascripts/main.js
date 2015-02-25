@@ -18,7 +18,24 @@ var pigcaveLink = new LinkItem( {
   image: "css/images/pig-cave.png"
 });
 
+var waiterLink = new LinkItem( {
+  url: "http://192.241.243.100/",
+  image: "css/images/waiter-icon.png"
+});
+
+var hangmanglerLink = new LinkItem( {
+  url: "https://hangmanglerhelper.herokuapp.com/",
+  image: "css/images/hangmangler-icon.png"
+});
+
 var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
+var portfoliolinkList = new LinkList([ pigcaveLink, waiterLink, hangmanglerLink ]);
+var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
+
+var LinkNavigation = {
+  contact: contactlinkList,
+  portfolio: portfoliolinkList
+};
 
 // var linkView = new LinkView({ model: githubLink });
 
