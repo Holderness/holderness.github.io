@@ -13,7 +13,7 @@ var LinkItemView = Backbone.View.extend({
 });
 
 var LinkListView = Backbone.View.extend({
-  el: '#nav',
+  el: '.footer',
   initialize: function() {
   	debugger;
     this.collection.bind("reset", this.render, this);
