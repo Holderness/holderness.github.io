@@ -30,6 +30,11 @@ body {
 }
 
 .link {
+  display: inline;
+  padding: 20px 120px 90px 15px;
+}
+
+.link-image {
   min-width: 90px;
   width: 90px;
   position: absolute;
@@ -89,10 +94,7 @@ h2 {
   margin: -40px 0 40px 0;
 }
 
-a {
-  display: inline;
-  padding: 20px 120px 90px 15px;
-}
+
 
 
 
@@ -113,12 +115,12 @@ a {
   .header {
   padding-top: 140px;
   }
-  .link {
+  .link-image {
     max-width: 75px;
     min-width:60px;
     width: 60px;
   }
-  a {
+  .link {
     display: inline;
     padding: 20px 75px 90px 10px;
   }

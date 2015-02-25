@@ -1,7 +1,7 @@
 $(function(){
 
   var growLinkOnHoverMobile = function growLinkOnHover() {
-    $('.link').hover(function() {
+    $('.link-image').hover(function() {
       $(this).stop(true, false).animate({
         width: "75px",
         marginTop: -35,
@@ -13,12 +13,12 @@ $(function(){
         width: "60px",
         marginTop: 0,
         marginLeft: 0
-      },200);
+      },600);
     });
   };
 
   var growLinkOnHover = function growLinkOnHover() {
-    $('.link').hover(function() {
+    $('.link-image').hover(function() {
       $(this).stop(true, false).animate({
         width: "130px",
         marginTop: -50,
@@ -30,7 +30,7 @@ $(function(){
         width: "90px",
         marginTop: 0,
         marginLeft: 0
-      },200);
+      },600);
     });
   };
 
@@ -100,6 +100,21 @@ $(function(){
     });
   };
 
+
+  var linkImageFadeOutSlide = function linkImageFadeOutSlide(){
+    var images = $(".footer").find("img");
+    $.each(images, function(i, el){
+      var elleft = $(el).offset().left;
+      $(el).css({
+                  left: elleft,
+                  opacity: 1
+      }).animate({
+                  left: '-=200px',
+                  opacity: 0
+      }, 1000);
+    });
+  };
+
   if ($(window).width() < 650) {
     growLinkOnHoverMobile();
     pigTongueBlepMobile();
@@ -112,7 +127,11 @@ $(function(){
 
 
   // resets animations on screen resize
-  $(window).resize(function(){location.reload();});
+  $(window).resize(function(){
+    if ($(window).width() < 650) location.reload();
+  });
+
+
 
 
 });
