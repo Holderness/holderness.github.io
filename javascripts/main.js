@@ -1,3 +1,27 @@
+var githubLink = new LinkItem( {
+  url: "https://github.com/Holderness",
+  image: "css/images/github-icon.png"
+});
+
+var linkedinLink = new LinkItem( {
+  url: "https://www.linkedin.com/in/andersonholderness",
+  image: "css/images/linked-in-icon.png"
+});
+
+var mailtoLink = new LinkItem( {
+  url: "mailto:andersonholderness@gmail.com",
+  image: "css/images/mail-icon.png"
+});
+
+var pigcaveLink = new LinkItem( {
+  url: "http://pigcave.com",
+  image: "css/images/pig-cave.png"
+});
+
+
+var linkView = new LinkView({ model: githubLink });
+var linkList = new LinkList();
+
 $(function(){
 
   var growLinkOnHoverMobile = function growLinkOnHover() {
@@ -127,9 +151,7 @@ $(function(){
 
 
   // resets animations on screen resize
-  $(window).resize(function(){
-    if ($(window).width() < 650) location.reload();
-  });
+  $(window).resize(function(){ location.reload();});
 
 
 
