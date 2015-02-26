@@ -59,22 +59,7 @@ $(function(){
     });
   };
 
-  var growLinkOnHover = function growLinkOnHover() {
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
-        width: "130px",
-        marginTop: -50,
-        marginLeft: -20
-      },200);
-    },
-    function(){
-      $(this).stop(true, false).animate({
-        width: "90px",
-        marginTop: 0,
-        marginLeft: 0
-      },600);
-    });
-  };
+
 
   var pigTongueBlepMobile = function pigTongueBlepMobile() {
     $('.pig-image').hover(function() {
@@ -161,7 +146,7 @@ $(function(){
     growLinkOnHoverMobile();
     pigTongueBlepMobile();
   } else {
-    growLinkOnHover();
+
     pigTongueBlep();
   }
 

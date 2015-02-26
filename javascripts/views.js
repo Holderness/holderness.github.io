@@ -13,11 +13,14 @@ var LinkItemView = Backbone.View.extend({
 });
 
 var LinkListView = Backbone.View.extend({
-  events: {
-    'change': 'growLinkOnHover'
-	},
 	el: "#footer",
   initialize: function() {
+    _.bindAll(this,'render', 'afterRender');
+    var _this = this;
+    this.render = _.wrap(this.render, function(render) {
+      render();
+      _this.afterRender();
+    });
     this.collection.bind("reset", this.render, this);
     this.collection.fetch();
   },
@@ -30,8 +33,26 @@ var LinkListView = Backbone.View.extend({
     });
     this.$el.append(container);
   },
+  afterRender: function(){
+    console.log('after render:');
+    this.growLinkOnHover();
+  },
   growLinkOnHover: function(){
-  	console.log('O )))))) O');
-  	growLinkOnHover();
+    console.log("growLinkOnHover loaded");
+    $('.link-image').hover(function() {
+      $(this).stop(true, false).animate({
+        width: "130px",
+        marginTop: -50,
+        marginLeft: -20
+      },200);
+    },
+    function(){
+      $(this).stop(true, false).animate({
+        width: "90px",
+        marginTop: 0,
+        marginLeft: 0
+      },600);
+    });
   }
+
 });
