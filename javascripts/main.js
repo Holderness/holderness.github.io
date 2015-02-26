@@ -129,7 +129,7 @@ $(function(){
 
 
   var linkImageFadeOutSlide = function linkImageFadeOutSlide(){
-    var images = $(".footer").find("img");
+    var images = $("#footer").find("img");
     $.each(images, function(i, el){
       var elleft = $(el).offset().left;
       $(el).css({
@@ -152,7 +152,6 @@ $(function(){
   }
 
   blinkMyPig();
-
 
   // resets animations on screen resize
   $(window).resize(function(){ location.reload();});

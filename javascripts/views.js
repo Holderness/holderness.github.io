@@ -15,16 +15,20 @@ var LinkItemView = Backbone.View.extend({
 var LinkListView = Backbone.View.extend({
 	el: "#footer",
   initialize: function() {
-    _.bindAll(this,'render', 'afterRender');
+    _.bindAll(this,'render', 'afterRender', 'beforeRender');
     var _this = this;
     this.render = _.wrap(this.render, function(render) {
-      render();
-      _this.afterRender();
+       _this.beforeRender();
+       render();
+       _this.afterRender();
     });
-    this.collection.bind("reset", this.render, this);
-    this.collection.fetch();
+  },
+  beforeRender: function() {
+    console.log("before render:");
+    this.linkImageFadeOutSlide();
   },
   render: function (e) {
+    console.log("render:");
     this.$el.empty();
     var container = document.createDocumentFragment();
     _.each(this.collection.models, function(link) {
@@ -54,8 +58,18 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  boldNav: function(){
-
+  linkImageFadeOutSlide: function(){
+    var images = $("#footer").find("img");
+    $.each(images, function(i, el){
+      var elleft = $(el).offset().left;
+      $(el).css({
+                  left: elleft,
+                  opacity: 1
+      }).animate({
+                  left: '-=200px',
+                  opacity: 0
+      }, 1000);
+    });
   }
 
 });
