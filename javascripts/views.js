@@ -13,19 +13,25 @@ var LinkItemView = Backbone.View.extend({
 });
 
 var LinkListView = Backbone.View.extend({
+  events: {
+    'change': 'growLinkOnHover'
+	},
 	el: "#footer",
   initialize: function() {
-  	debugger;
     this.collection.bind("reset", this.render, this);
     this.collection.fetch();
   },
   render: function (e) {
+    this.$el.empty();
+    var container = document.createDocumentFragment();
     _.each(this.collection.models, function(link) {
-    	debugger;
-      var linkItemView = new LinkItemView({model: link
+      var linkItemView = new LinkItemView({model: link});
+      container.appendChild(linkItemView.render().el);
     });
-    this.$el.append(linkItemView.render().el);
-    }, this);
-    return this;
+    this.$el.append(container);
+  },
+  growLinkOnHover: function(){
+  	console.log('O )))))) O');
+  	growLinkOnHover();
   }
 });

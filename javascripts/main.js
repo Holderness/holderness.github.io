@@ -29,7 +29,7 @@ var hangmanglerLink = new LinkItem( {
 });
 
 var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new LinkList([ pigcaveLink, waiterLink, hangmanglerLink ]);
+var portfoliolinkList = new LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
 var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 
 var LinkNavigation = {
