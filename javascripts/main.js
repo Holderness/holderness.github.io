@@ -142,11 +142,12 @@ $(function(){
     });
   };
 
+
+
   if ($(window).width() < 650) {
     growLinkOnHoverMobile();
     pigTongueBlepMobile();
   } else {
-
     pigTongueBlep();
   }
 

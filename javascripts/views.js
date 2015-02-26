@@ -53,6 +53,9 @@ var LinkListView = Backbone.View.extend({
         marginLeft: 0
       },600);
     });
+  },
+  boldNav: function(){
+
   }
 
 });
