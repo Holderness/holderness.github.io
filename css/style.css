@@ -89,6 +89,18 @@ body {
   display: inline;
 }
 
+a:link {
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #E18484;
+  text-shadow: .7px -.7px #E18484
+}
 
 h1 {
   -webkit-text-stroke: 1px #000000;

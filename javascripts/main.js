@@ -42,22 +42,6 @@ var LinkNavigation = {
 
 $(function(){
 
-  var growLinkOnHoverMobile = function growLinkOnHover() {
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
-        width: "75px",
-        marginTop: -35,
-        marginLeft: -10
-      },200);
-    },
-    function() {
-      $(this).stop(true, false).animate({
-        width: "60px",
-        marginTop: 0,
-        marginLeft: 0
-      },600);
-    });
-  };
 
 
 
@@ -128,24 +112,7 @@ $(function(){
   };
 
 
-  var linkImageFadeOutSlide = function linkImageFadeOutSlide(){
-    var images = $("#footer").find("img");
-    $.each(images, function(i, el){
-      var elleft = $(el).offset().left;
-      $(el).css({
-                  left: elleft,
-                  opacity: 1
-      }).animate({
-                  left: '-=200px',
-                  opacity: 0
-      }, 1000);
-    });
-  };
-
-
-
   if ($(window).width() < 650) {
-    growLinkOnHoverMobile();
     pigTongueBlepMobile();
   } else {
     pigTongueBlep();

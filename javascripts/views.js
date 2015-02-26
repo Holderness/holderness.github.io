@@ -31,15 +31,21 @@ var LinkListView = Backbone.View.extend({
     console.log("render:");
     this.$el.empty();
     var container = document.createDocumentFragment();
+    _.delay(
     _.each(this.collection.models, function(link) {
       var linkItemView = new LinkItemView({model: link});
       container.appendChild(linkItemView.render().el);
-    });
+    }),
+    300000);
     this.$el.append(container);
   },
   afterRender: function(){
     console.log('after render:');
-    this.growLinkOnHover();
+    if ($(window).width() < 650) {
+      this.growLinkOnHoverMobile();
+    } else {
+      this.growLinkOnHover();
+    }
   },
   growLinkOnHover: function(){
     console.log("growLinkOnHover loaded");
@@ -53,6 +59,22 @@ var LinkListView = Backbone.View.extend({
     function(){
       $(this).stop(true, false).animate({
         width: "90px",
+        marginTop: 0,
+        marginLeft: 0
+      },600);
+    });
+  },
+  growLinkOnHoverMobile: function(){
+    $('.link-image').hover(function() {
+      $(this).stop(true, false).animate({
+        width: "75px",
+        marginTop: -35,
+        marginLeft: -10
+      },200);
+    },
+    function() {
+      $(this).stop(true, false).animate({
+        width: "60px",
         marginTop: 0,
         marginLeft: 0
       },600);
