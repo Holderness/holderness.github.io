@@ -42,9 +42,6 @@ var LinkNavigation = {
 
 $(function(){
 
-
-
-
   var pigTongueBlepMobile = function pigTongueBlepMobile() {
     $('.pig-image').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({

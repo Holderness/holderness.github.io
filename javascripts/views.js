@@ -1,16 +1,16 @@
 var LinkItemView = Backbone.View.extend({
 	tagName: 'a',
 	className: 'link',
-	template: _.template("<img src='<%= image %>' >"),
+	template: _.template(
+    "<img class='link-image' src='<%= image %>' >"),
 	render: function(){
 		var attributes = this.model.toJSON();
     this.$el.attr('href', this.model.get('url'))
-            .html(this.template(attributes))
-            .find("img")
-            .addClass("link-image");
+            .html(this.template(attributes));
     return this;
 	}
 });
+  
 
 var LinkListView = Backbone.View.extend({
 	el: "#footer",
