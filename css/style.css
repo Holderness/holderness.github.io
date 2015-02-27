@@ -1,7 +1,7 @@
 body {
   min-width: 400px;
   color: #000000;
-  font-family: 'Forum', cursive;
+  font-family: 'Forum', futura;
   font-size: 16px;
 }
 
@@ -87,6 +87,10 @@ body {
 
 .nav li {
   display: inline;
+}
+
+a, a:active, a:focus {
+  outline: none;
 }
 
 a:link {
