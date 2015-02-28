@@ -12,6 +12,7 @@ var LinkItemView = Backbone.View.extend({
   
 
 var LinkListView = Backbone.View.extend({
+  id: 'link-list-view',
   initialize: function() {
     _.bindAll(this,'render', 'afterRender', 'beforeRender');
     var _this = this;
@@ -20,6 +21,9 @@ var LinkListView = Backbone.View.extend({
        render();
        _this.afterRender();
     });
+  },
+  events: {
+    "click" : "growLinkOnHover"
   },
   beforeRender: function() {
     console.log("before render:");
@@ -44,15 +48,15 @@ var LinkListView = Backbone.View.extend({
   },
   growLinkOnHover: function() {
     console.log("growLinkOnHover loaded");
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
+    $('.link-image').hover(function(e) {
+      $(this).stop(true, true).animate({
         width: "130px",
         marginTop: -50,
         marginLeft: -20
       },200);
     },
     function(){
-      $(this).stop(true, false).animate({
+      $(this).stop(true, true).animate({
         width: "90px",
         marginTop: 0,
         marginLeft: 0
@@ -60,7 +64,8 @@ var LinkListView = Backbone.View.extend({
     });
   },
   growLinkOnHoverMobile: function() {
-    $('.link-image').hover(function() {
+    $('.link-image').hover(function(e) {
+      e.preventDefault();
       $(this).stop(true, false).animate({
         width: "75px",
         marginTop: -35,
@@ -75,40 +80,26 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  appendLinks: function() {
-
-  },
   linkImageFadeOutSlide: function() {
-    var images = this.$el.find("img");
-    $.each(images, function(i, el){
-      var elleft = $(el).offset().left;
-      $(el).css({
-                  left: elleft,
-                  opacity: 1
-      }).animate({
-                  left: '-=250px',
-                  opacity: 0
-      }, 500);
-    });
-    // if (_.isFunction(callback)) {
-    //       callback();
-    // }
+    var elleft = $('#link-list-view').offset().left;
+    $('#link-list-view').css({
+      left: elleft,
+      opacity: 1
+    }).animate({
+      left: '-=200px',
+      opacity: 0
+    }, 500);
   },
   linkImageFadeInSlide: function() {
-    var images = this.$el.find("img");
-    $.each(images, function(i, el){
-      var elleft = $(el).offset().left;
-      $(el).css({
-                  left: elleft += 250,
-                  opacity: 0
-      }).animate({
-                  left: '-=250px',
-                  opacity: 1
-      }, 600);
-    });
-    // if (_.isFunction(callback)) {
-    //       callback();
-    // }
+    var elleft = $('#link-list-view').offset().left;
+    $('#link-list-view').css({
+      left: elleft += 250,
+      opacity: 0
+    }).animate({
+      left: '-=250px',
+      opacity: 1
+    }, 600);
+    this.afterRender();
   }
 
 });

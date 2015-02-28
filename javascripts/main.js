@@ -44,6 +44,41 @@ var LinkNavigation = {
 
 $(function(){
 
+  var growLinkOnHover = function growLinkOnHover() {
+    console.log("growLinkOnHover loaded");
+    $('.link-image').hover(function() {
+      $(this).stop(true, false).animate({
+        width: "130px",
+        marginTop: -50,
+        marginLeft: -20
+      },200);
+    },
+    function(){
+      $(this).stop(true, false).animate({
+        width: "90px",
+        marginTop: 0,
+        marginLeft: 0
+      },600);
+    });
+  };
+
+  var growLinkOnHoverMobile = function growLinkOnHoverMobile() {
+    $('.link-image').hover(function() {
+      $(this).stop(true, false).animate({
+        width: "75px",
+        marginTop: -35,
+        marginLeft: -10
+      },200);
+    },
+    function() {
+      $(this).stop(true, false).animate({
+        width: "60px",
+        marginTop: 0,
+        marginLeft: 0
+      },600);
+    });
+  };
+
   var pigTongueBlepMobile = function pigTongueBlepMobile() {
     $('.pig-image').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({
@@ -118,12 +153,17 @@ $(function(){
   };
 
 
+  function hoverLinks() {
   if ($(window).width() < 650) {
+    growLinkOnHoverMobile();
     pigTongueBlepMobile();
   } else {
+    growLinkOnHover();
     pigTongueBlep();
   }
+  }
 
+  hoverLinks();
   blinkMyPig();
   boldNavEl();
 

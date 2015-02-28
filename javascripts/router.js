@@ -12,7 +12,7 @@ var AppRouter = Backbone.Router.extend({
   },
   portfolio: function(pageRoute) {
     this.portfolioLinkListView = new LinkListView({collection: LinkNavigation.portfolio,
-                                                    className: "portfolio"});
+                                                   className: "portfolio"});
     this.navLinkListView.goto(this.portfolioLinkListView);
     // this.portfolioLinkListView.render();
   }

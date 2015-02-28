@@ -89,6 +89,14 @@ body {
   display: inline;
 }
 
+#link-list-view {
+  position: absolute;
+  margin-left: auto;
+  margin-right:auto;
+  left: 0;
+  right: 0;
+}
+
 a, a:active, a:focus {
   outline: none;
 }
