@@ -1,18 +1,23 @@
 var AppRouter = Backbone.Router.extend({
   routes: {
-    "": "page",
-    ":contact": "page",
-    ":portfolio": "page"
+    "": "contact",
+    "contact": "contact",
+    "portfolio": "portfolio"
   },
-  page: function(pageRoute) {
-    var pageRoute = pageRoute || "contact";
-    this.pageRoute = LinkNavigation[pageRoute];
-    this.linkListView = new LinkListView({collection: this.pageRoute});
-    $('#footer').html(this.linkListView.render());
+  contact: function() {
+    this.contactLinkListView = new LinkListView({collection: LinkNavigation.contact});
+    // this.navLinkListView.goto(this.contactLinkListView);
+    this.contactLinkListView.render();
+  },
+  portfolio: function(pageRoute) {
+    this.portfolioLinkListView = new LinkListView({collection: LinkNavigation.portfolio});
+    // this.navLinkListView.goto(this.portfolioLinkListView);
+    this.portfolioLinkListView.render();
   }
 });
 
 
 
 var app = new AppRouter();
+// app.navLinkListView = new LinkListView();
 Backbone.history.start();

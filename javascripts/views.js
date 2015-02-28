@@ -2,7 +2,7 @@ var LinkItemView = Backbone.View.extend({
 	tagName: 'a',
 	className: 'link',
 	template: _.template("<img class='link-image' src='<%= image %>' >"),
-	render: function(){
+	render: function() {
 		var attributes = this.model.toJSON();
     this.$el.attr('href', this.model.get('url'))
             .html(this.template(attributes));
@@ -27,17 +27,15 @@ var LinkListView = Backbone.View.extend({
   },
   render: function (e) {
     console.log("render:");
-    this.$el.empty();
     var container = document.createDocumentFragment();
     _.each(this.collection.models, function(link) {
       var linkItemView = new LinkItemView({model: link});
       container.appendChild(linkItemView.render().el);
     });
-    this.$el.html(container).hide().fadeIn();
-    // this.linkImageFadeOutSlide();
+    this.$el.html(container);
     return this;
   },
-  afterRender: function(){
+  afterRender: function() {
     console.log('after render:');
     if ($(window).width() < 650) {
       this.growLinkOnHoverMobile();
@@ -45,7 +43,7 @@ var LinkListView = Backbone.View.extend({
       this.growLinkOnHover();
     }
   },
-  growLinkOnHover: function(){
+  growLinkOnHover: function() {
     console.log("growLinkOnHover loaded");
     $('.link-image').hover(function() {
       $(this).stop(true, false).animate({
@@ -62,7 +60,7 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  growLinkOnHoverMobile: function(){
+  growLinkOnHoverMobile: function() {
     $('.link-image').hover(function() {
       $(this).stop(true, false).animate({
         width: "75px",
@@ -78,8 +76,11 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  linkImageFadeOutSlide: function(){
-    var images = $("#footer").find("img");
+  appendLinks: function() {
+
+  },
+  linkImageFadeOutSlide: function() {
+    var images = this.$el.find("img");
     $.each(images, function(i, el){
       var elleft = $(el).offset().left;
       $(el).css({
@@ -88,8 +89,52 @@ var LinkListView = Backbone.View.extend({
       }).animate({
                   left: '-=200px',
                   opacity: 0
-      }, 1000);
+      }, 2000);
     });
+    // if (_.isFunction(callback)) {
+    //       callback();
+    // }
+  },
+  linkImageFadeInSlide: function() {
+    var images = this.$el.find("img");
+    $.each(images, function(i, el){
+      var elleft = $(el).offset().left;
+      elleft += 200;
+      $(el).css({
+                  left: elleft,
+                  opacity: 0
+      }).animate({
+                  left: '-=200px',
+                  opacity: 1
+      }, 600);
+    });
+    // if (_.isFunction(callback)) {
+    //       callback();
+    // }
+  },
+  goto: function(view) {
+
+      var previous = this.currentView || null;
+      var next = view;
+      var _this = this;
+      
+      if (previous) {
+        // previous.linkImageFadeOutSlide();
+      }
+
+      setTimeout(function(){
+        next.render();
+                next.linkImageFadeInSlide();
+        this.currentView = next;
+      }, 200);
+      
+
+        next.linkImageFadeInSlide();
+        this.currentView = next;
+
+
+
+
   }
 
 });
