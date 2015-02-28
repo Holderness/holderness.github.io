@@ -1,19 +1,19 @@
 var AppRouter = Backbone.Router.extend({
-	routes: {
-    "": "list",
-    ":contact": "list",
-    ":portfolio": "list"
-	},
-	list: function(linkList) {
-		var linkList = linkList || "contact";
-		this.boldNav(linkList);
-		this.linkList = LinkNavigation[linkList];
-		this.linkListView = new LinkListView({collection: this.linkList});
-		$('#footer').html(this.linkListView.render());
-	},
+  routes: {
+    "": "page",
+    ":contact": "page",
+    ":portfolio": "page"
+  },
+  page: function(pageRoute) {
+    var pageRoute = pageRoute || "contact";
+    this.boldNav(pageRoute);
+    this.pageRoute = LinkNavigation[pageRoute];
+    this.linkListView = new LinkListView({collection: this.pageRoute});
+    $('#footer').html(this.linkListView.render());
+  },
   boldNav: function(navEl){
-    $('#nav').find('.active').removeClass('active');
-    $('#nav').find("#"+navEl).addClass('active');
+    $('#nav').find('.bold-nav').removeClass('bold-nav');
+    $('#nav').find("#"+navEl).addClass('bold-nav');
   }
 });
 

@@ -1,8 +1,7 @@
 var LinkItemView = Backbone.View.extend({
 	tagName: 'a',
 	className: 'link',
-	template: _.template(
-    "<img class='link-image' src='<%= image %>' >"),
+	template: _.template("<img class='link-image' src='<%= image %>' >"),
 	render: function(){
 		var attributes = this.model.toJSON();
     this.$el.attr('href', this.model.get('url'))
@@ -13,9 +12,9 @@ var LinkItemView = Backbone.View.extend({
   
 
 var LinkListView = Backbone.View.extend({
-	el: "#footer",
+  el: "#footer",
   initialize: function() {
-    _.bindAll(this,'render', 'afterRender', 'beforeRender');
+    _.bindAll(this,'render', 'afterRender', 'beforeRender', 'linkImageFadeOutSlide');
     var _this = this;
     this.render = _.wrap(this.render, function(render) {
        _this.beforeRender();
@@ -25,19 +24,18 @@ var LinkListView = Backbone.View.extend({
   },
   beforeRender: function() {
     console.log("before render:");
-    this.linkImageFadeOutSlide();
   },
   render: function (e) {
     console.log("render:");
     this.$el.empty();
     var container = document.createDocumentFragment();
-    _.delay(
     _.each(this.collection.models, function(link) {
       var linkItemView = new LinkItemView({model: link});
       container.appendChild(linkItemView.render().el);
-    }),
-    300000);
-    this.$el.append(container);
+    });
+    this.$el.html(container).hide().fadeIn();
+    // this.linkImageFadeOutSlide();
+    return this;
   },
   afterRender: function(){
     console.log('after render:');
