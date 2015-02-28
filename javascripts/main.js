@@ -108,6 +108,13 @@ $(function(){
     });
   };
 
+  var boldNavEl = function boldNavEl() {
+    $('#nav a').on("click", function() {
+      $('#nav').find('.bold-nav').removeClass('bold-nav');
+      $(this).addClass('bold-nav');
+    });
+  };
+
 
   if ($(window).width() < 650) {
     pigTongueBlepMobile();
@@ -116,6 +123,7 @@ $(function(){
   }
 
   blinkMyPig();
+  boldNavEl();
 
   // resets animations on screen resize
   $(window).resize(function(){ location.reload();});
