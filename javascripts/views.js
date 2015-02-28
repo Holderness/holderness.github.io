@@ -12,7 +12,6 @@ var LinkItemView = Backbone.View.extend({
   
 
 var LinkListView = Backbone.View.extend({
-  el: "#footer",
   initialize: function() {
     _.bindAll(this,'render', 'afterRender', 'beforeRender', 'linkImageFadeOutSlide');
     var _this = this;
@@ -87,9 +86,9 @@ var LinkListView = Backbone.View.extend({
                   left: elleft,
                   opacity: 1
       }).animate({
-                  left: '-=200px',
+                  left: '-=300px',
                   opacity: 0
-      }, 2000);
+      }, 700);
     });
     // if (_.isFunction(callback)) {
     //       callback();
@@ -99,19 +98,26 @@ var LinkListView = Backbone.View.extend({
     var images = this.$el.find("img");
     $.each(images, function(i, el){
       var elleft = $(el).offset().left;
-      elleft += 200;
+      elleft += 300;
       $(el).css({
                   left: elleft,
                   opacity: 0
       }).animate({
-                  left: '-=200px',
+                  left: '-=300px',
                   opacity: 1
-      }, 600);
+      }, 700);
     });
     // if (_.isFunction(callback)) {
     //       callback();
     // }
-  },
+  }
+
+});
+
+
+
+var NavLinkListView = Backbone.View.extend({
+  el: "#footer",
   goto: function(view) {
 
       var previous = this.currentView || null;
@@ -119,22 +125,20 @@ var LinkListView = Backbone.View.extend({
       var _this = this;
       
       if (previous) {
-        // previous.linkImageFadeOutSlide();
+        previous.linkImageFadeOutSlide();
+      }
+      if (previous === null) {
+        next.render();
+        _this.$el.html(next.$el);
+        next.linkImageFadeInSlide();
+      } else {
+        next.render();
+        setTimeout(function(){
+          _this.$el.html(next.$el);
+          next.linkImageFadeInSlide();
+        }, 700);
       }
 
-      setTimeout(function(){
-        next.render();
-                next.linkImageFadeInSlide();
-        this.currentView = next;
-      }, 200);
-      
-
-        next.linkImageFadeInSlide();
-        this.currentView = next;
-
-
-
-
+      this.currentView = next;
   }
-
 });

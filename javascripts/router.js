@@ -6,18 +6,19 @@ var AppRouter = Backbone.Router.extend({
   },
   contact: function() {
     this.contactLinkListView = new LinkListView({collection: LinkNavigation.contact});
-    // this.navLinkListView.goto(this.contactLinkListView);
-    this.contactLinkListView.render();
+    this.navLinkListView.goto(this.contactLinkListView);
+    // this.contactLinkListView.render();
   },
   portfolio: function(pageRoute) {
     this.portfolioLinkListView = new LinkListView({collection: LinkNavigation.portfolio});
-    // this.navLinkListView.goto(this.portfolioLinkListView);
-    this.portfolioLinkListView.render();
+    this.navLinkListView.goto(this.portfolioLinkListView);
+    // this.portfolioLinkListView.render();
   }
 });
 
 
 
 var app = new AppRouter();
-// app.navLinkListView = new LinkListView();
+app.navLinkListView = new NavLinkListView();
+
 Backbone.history.start();

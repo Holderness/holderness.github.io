@@ -37,6 +37,8 @@ var LinkNavigation = {
   portfolio: portfoliolinkList
 };
 
+
+
 // var linkView = new LinkView({ model: githubLink });
 
 
@@ -124,6 +126,7 @@ $(function(){
 
   blinkMyPig();
   boldNavEl();
+
 
   // resets animations on screen resize
   $(window).resize(function(){ location.reload();});
