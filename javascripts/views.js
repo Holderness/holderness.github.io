@@ -13,7 +13,7 @@ var LinkItemView = Backbone.View.extend({
 
 var LinkListView = Backbone.View.extend({
   initialize: function() {
-    _.bindAll(this,'render', 'afterRender', 'beforeRender', 'linkImageFadeOutSlide');
+    _.bindAll(this,'render', 'afterRender', 'beforeRender');
     var _this = this;
     this.render = _.wrap(this.render, function(render) {
        _this.beforeRender();
@@ -86,9 +86,9 @@ var LinkListView = Backbone.View.extend({
                   left: elleft,
                   opacity: 1
       }).animate({
-                  left: '-=300px',
+                  left: '-=250px',
                   opacity: 0
-      }, 700);
+      }, 500);
     });
     // if (_.isFunction(callback)) {
     //       callback();
@@ -98,14 +98,13 @@ var LinkListView = Backbone.View.extend({
     var images = this.$el.find("img");
     $.each(images, function(i, el){
       var elleft = $(el).offset().left;
-      elleft += 300;
       $(el).css({
-                  left: elleft,
+                  left: elleft += 250,
                   opacity: 0
       }).animate({
-                  left: '-=300px',
+                  left: '-=250px',
                   opacity: 1
-      }, 700);
+      }, 600);
     });
     // if (_.isFunction(callback)) {
     //       callback();
@@ -124,19 +123,17 @@ var NavLinkListView = Backbone.View.extend({
       var next = view;
       var _this = this;
       
-      if (previous) {
-        previous.linkImageFadeOutSlide();
-      }
       if (previous === null) {
         next.render();
         _this.$el.html(next.$el);
         next.linkImageFadeInSlide();
       } else {
+        previous.linkImageFadeOutSlide();
         next.render();
         setTimeout(function(){
           _this.$el.html(next.$el);
           next.linkImageFadeInSlide();
-        }, 700);
+        }, 500);
       }
 
       this.currentView = next;
