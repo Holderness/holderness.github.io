@@ -1,5 +1,5 @@
 body {
-  min-width: 400px;
+  min-width: 500px;
   color: #000000;
   font-family: 'Forum', futura;
   font-size: 16px;
@@ -16,11 +16,10 @@ body {
 #footer {
   padding-top: 40px;
   text-align: center;
-  z-index: 1;
 }
 
 .link {
-  display: inline;
+  display: inline-block;
   padding: 20px 120px 90px 15px;
 }
 

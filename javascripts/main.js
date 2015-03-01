@@ -158,8 +158,16 @@ $(function(){
   } else {
     pigTongueBlep();
   }
-  
 
+  var linkListViewWidth = function linkListViewWidth(){
+    var totalWidth = 0;
+    $.each($('.link-image'), function(i, child){
+      totalWidth += $(child).width();
+    });
+    return totalWidth;
+  };
+  
+  app.linkListViewWidth = linkListViewWidth();
   blinkMyPig();
   boldNavEl();
 

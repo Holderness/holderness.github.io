@@ -93,21 +93,24 @@ var NavLinkListView = Backbone.View.extend({
       if (previous === null) {
         _this.$el.html(next.$el);
         next.linkCarousel(600, 250, 250, true);
+        next.afterRender();
       } else if (next.className === "portfolio" && previous.className === "contact") {
         previous.linkCarousel(500, 0, 250, false);
         setTimeout(function(){
           _this.$el.html(next.$el);
           next.linkCarousel(600, 250, 250, true);
+          next.afterRender();
         }, 500);
       } else if (next.className === "contact" && previous.className === "portfolio") {
         previous.linkCarousel(500, 0, -250, false);
         setTimeout(function(){
           _this.$el.html(next.$el);
           next.linkCarousel(600, -250, -250, true);
+          next.afterRender();
         }, 500);
       }
 
-      next.afterRender();
+      
       this.currentView = next;
   }
 });
