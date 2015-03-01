@@ -16,6 +16,7 @@ body {
 #footer {
   padding-top: 40px;
   text-align: center;
+  z-index: 1;
 }
 
 .link {
@@ -126,6 +127,18 @@ h2 {
   font-family: 'Lato', sans-serif;
   font-size: 23px;
   margin: -40px 0 40px 0;
+}
+
+
+.note-wrapper {
+  text-align: right;
+  padding-top: 100px;
+  padding-right: 30px;
+}
+
+#note {
+  position: relative;
+  color: #D1D1D1;
 }
 
 
