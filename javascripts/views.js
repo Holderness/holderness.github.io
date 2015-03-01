@@ -64,7 +64,7 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  linkImageFadeSlide: function(duration, startPosition, endPosition, slideIn) {
+  linkCarousel: function(duration, startPosition, endPosition, slideIn) {
     var elleft = $('#link-list-view').offset().left;
     var opacityStart = (slideIn === false) ? 1 : 0;
     var opacityEnd = (slideIn === true) ? 1 : 0;
@@ -88,22 +88,33 @@ var NavLinkListView = Backbone.View.extend({
       var previous = this.currentView || null;
       var next = view;
       var _this = this;
+      next.render();
       
       if (previous === null) {
-        next.render();
         _this.$el.html(next.$el);
-        next.linkImageFadeSlide(600, 250, 250, true);
-        next.afterRender();
-      } else {
-        previous.linkImageFadeSlide(500, 0, 250, false);
-        next.render();
+        next.linkCarousel(600, 250, 250, true);
+      } else if (next.className === "portfolio" && previous.className === "contact") {
+        previous.linkCarousel(500, 0, 250, false);
         setTimeout(function(){
           _this.$el.html(next.$el);
-          next.linkImageFadeSlide(600, 250, 250, true);
-          next.afterRender();
+          next.linkCarousel(600, 250, 250, true);
+        }, 500);
+      } else if (next.className === "contact" && previous.className === "portfolio") {
+        previous.linkCarousel(500, 0, -250, false);
+        setTimeout(function(){
+          _this.$el.html(next.$el);
+          next.linkCarousel(600, -250, -250, true);
         }, 500);
       }
 
+      next.afterRender();
       this.currentView = next;
   }
 });
+
+
+
+
+
+
+
