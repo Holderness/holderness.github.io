@@ -13,21 +13,6 @@ var LinkItemView = Backbone.View.extend({
 
 var LinkListView = Backbone.View.extend({
   id: 'link-list-view',
-  initialize: function() {
-    _.bindAll(this,'render', 'afterRender', 'beforeRender');
-    var _this = this;
-    this.render = _.wrap(this.render, function(render) {
-       _this.beforeRender();
-       render();
-       _this.afterRender();
-    });
-  },
-  events: {
-    "click" : "growLinkOnHover"
-  },
-  beforeRender: function() {
-    console.log("before render:");
-  },
   render: function (e) {
     console.log("render:");
     var container = document.createDocumentFragment();
@@ -48,7 +33,7 @@ var LinkListView = Backbone.View.extend({
   },
   growLinkOnHover: function() {
     console.log("growLinkOnHover loaded");
-    $('.link-image').hover(function(e) {
+    $('.link-image').hover(function() {
       $(this).stop(true, true).animate({
         width: "130px",
         marginTop: -50,
@@ -64,8 +49,7 @@ var LinkListView = Backbone.View.extend({
     });
   },
   growLinkOnHoverMobile: function() {
-    $('.link-image').hover(function(e) {
-      e.preventDefault();
+    $('.link-image').hover(function() {
       $(this).stop(true, false).animate({
         width: "75px",
         marginTop: -35,
@@ -80,26 +64,17 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  linkImageFadeOutSlide: function() {
+  linkImageFadeSlide: function(duration, startPosition, endPosition, slideIn) {
     var elleft = $('#link-list-view').offset().left;
+    var opacityStart = (slideIn === false) ? 1 : 0;
+    var opacityEnd = (slideIn === true) ? 1 : 0;
     $('#link-list-view').css({
-      left: elleft,
-      opacity: 1
+      left: elleft += startPosition,
+      opacity: opacityStart
     }).animate({
-      left: '-=200px',
-      opacity: 0
-    }, 500);
-  },
-  linkImageFadeInSlide: function() {
-    var elleft = $('#link-list-view').offset().left;
-    $('#link-list-view').css({
-      left: elleft += 250,
-      opacity: 0
-    }).animate({
-      left: '-=250px',
-      opacity: 1
-    }, 600);
-    this.afterRender();
+      left: '-=' + endPosition + 'px',
+      opacity: opacityEnd
+    }, duration);
   }
 
 });
@@ -117,13 +92,15 @@ var NavLinkListView = Backbone.View.extend({
       if (previous === null) {
         next.render();
         _this.$el.html(next.$el);
-        next.linkImageFadeInSlide();
+        next.linkImageFadeSlide(600, 250, 250, true);
+        next.afterRender();
       } else {
-        previous.linkImageFadeOutSlide();
+        previous.linkImageFadeSlide(500, 0, 250, false);
         next.render();
         setTimeout(function(){
           _this.$el.html(next.$el);
-          next.linkImageFadeInSlide();
+          next.linkImageFadeSlide(600, 250, 250, true);
+          next.afterRender();
         }, 500);
       }
 

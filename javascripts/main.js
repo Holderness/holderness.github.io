@@ -153,17 +153,13 @@ $(function(){
   };
 
 
-  function hoverLinks() {
   if ($(window).width() < 650) {
-    growLinkOnHoverMobile();
     pigTongueBlepMobile();
   } else {
-    growLinkOnHover();
     pigTongueBlep();
   }
-  }
+  
 
-  hoverLinks();
   blinkMyPig();
   boldNavEl();
 

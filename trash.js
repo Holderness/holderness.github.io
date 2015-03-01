@@ -42,5 +42,37 @@ trash.js
       		opacity: 1})
       	.animate({left: '+=50px',
       		opacity: 0},'slow')
-      	
       });
+
+
+
+
+//link list view trash after refactor
+  initialize: function() {
+    _.bindAll(this,'render');
+    var _this = this;
+    this.render = _.wrap(this.render, function(render) {
+       render();
+    });
+  },
+  linkImageFadeOutSlide: function() {
+    var elleft = $('#link-list-view').offset().left;
+    $('#link-list-view').css({
+      left: elleft,
+      opacity: 1
+    }).animate({
+      left: '-=250px',
+      opacity: 0
+    }, 500);
+  },
+  linkImageFadeInSlide: function() {
+    var elleft = $('#link-list-view').offset().left;
+    $('#link-list-view').css({
+      left: elleft += 250,
+      opacity: 0
+    }).animate({
+      left: '-=250px',
+      opacity: 1
+    }, 600);
+    this.afterRender();
+  },
