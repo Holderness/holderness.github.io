@@ -32,54 +32,29 @@ var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 var portfoliolinkList = new LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
 var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 
-var LinkNavigation = {
-  contact: contactlinkList,
-  portfolio: portfoliolinkList
-};
 
+var pigcaveProject = new Project( {
+  title: "blurg",
+  description: "blah",
+  image: "blag"
+});
 
+var waiterProject = new Project( {
+  title: "blurg",
+  description: "blah",
+  image: "blag"
+});
 
-// var linkView = new LinkView({ model: githubLink });
+var hangmanglerProject = new Project({
+  title: "blurg",
+  description: "blah",
+  image: "blag"
+});
 
 
 $(function(){
 
-  var growLinkOnHover = function growLinkOnHover() {
-    console.log("growLinkOnHover loaded");
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
-        width: "130px",
-        marginTop: -50,
-        marginLeft: -20
-      },200);
-    },
-    function(){
-      $(this).stop(true, false).animate({
-        width: "90px",
-        marginTop: 0,
-        marginLeft: 0
-      },600);
-    });
-  };
-
-  var growLinkOnHoverMobile = function growLinkOnHoverMobile() {
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
-        width: "75px",
-        marginTop: -35,
-        marginLeft: -10
-      },200);
-    },
-    function() {
-      $(this).stop(true, false).animate({
-        width: "60px",
-        marginTop: 0,
-        marginLeft: 0
-      },600);
-    });
-  };
-
-  var pigTongueBlepMobile = function pigTongueBlepMobile() {
+  var pigTongueBlep = function pigTongueBlep(marginTop, marginLeft) {
     $('.pig-image').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({
         marginTop: 0,
@@ -88,23 +63,8 @@ $(function(){
     },
     function() {
       $('.fly-pig-tongue').stop(true, false).animate({
-        marginTop: -9,
-        marginLeft: -3
-      }, 200);
-    });
-  };
-
-  var pigTongueBlep = function pigTongueBlep() {
-    $('.pig-image').hover(function() {
-      $('.fly-pig-tongue').stop(true, false).animate({
-        marginTop: 0,
-        marginLeft: 0
-      }, 2000);
-    },
-    function() {
-      $('.fly-pig-tongue').stop(true, false).animate({
-        marginTop: -18,
-        marginLeft: -7
+        marginTop: marginTop,
+        marginLeft: marginLeft
       }, 200);
     });
   };
@@ -154,20 +114,12 @@ $(function(){
 
 
   if ($(window).width() < 650) {
-    pigTongueBlepMobile();
+    pigTongueBlep(-9,-3);
   } else {
-    pigTongueBlep();
+    pigTongueBlep(-18, -7);
   }
 
-  var linkListViewWidth = function linkListViewWidth(){
-    var totalWidth = 0;
-    $.each($('.link-image'), function(i, child){
-      totalWidth += $(child).width();
-    });
-    return totalWidth;
-  };
-  
-  app.linkListViewWidth = linkListViewWidth();
+
   blinkMyPig();
   boldNavEl();
 

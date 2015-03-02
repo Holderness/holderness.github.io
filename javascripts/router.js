@@ -5,13 +5,14 @@ var AppRouter = Backbone.Router.extend({
     "portfolio": "portfolio"
   },
   contact: function() {
-    this.contactLinkListView = new LinkListView({collection: LinkNavigation.contact,
+    this.contactLinkListView = new LinkListView({collection: contactlinkList,
                                                   className: "contact"});
     this.navLinkListView.goto(this.contactLinkListView);
+    this.homeView = new HomeView({});
     // this.contactLinkListView.render();
   },
   portfolio: function(pageRoute) {
-    this.portfolioLinkListView = new LinkListView({collection: LinkNavigation.portfolio,
+    this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
                                                    className: "portfolio"});
     this.navLinkListView.goto(this.portfolioLinkListView);
     // this.portfolioLinkListView.render();

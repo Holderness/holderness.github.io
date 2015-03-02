@@ -26,23 +26,24 @@ var LinkListView = Backbone.View.extend({
   afterRender: function() {
     console.log('after render:');
     if ($(window).width() < 650) {
-      this.growLinkOnHoverMobile();
+      this.growLinkOnHover("75px", -35, -10);
     } else {
-      this.growLinkOnHover();
+      this.growLinkOnHover("130px", -50, -20);
     }
   },
-  growLinkOnHover: function() {
+  growLinkOnHover: function(growWidth, marginTop, marginLeft) {
     console.log("growLinkOnHover loaded");
+    var originalWidth = $('.link-image').width();
     $('.link-image').hover(function() {
       $(this).stop(true, true).animate({
-        width: "130px",
-        marginTop: -50,
-        marginLeft: -20
+        width: growWidth,
+        marginTop: marginTop,
+        marginLeft: marginLeft
       },200);
     },
     function(){
       $(this).stop(true, true).animate({
-        width: "90px",
+        width: originalWidth,
         marginTop: 0,
         marginLeft: 0
       },600);
@@ -110,11 +111,32 @@ var NavLinkListView = Backbone.View.extend({
         }, 500);
       }
 
-      
       this.currentView = next;
   }
 });
 
+
+var HomeView = Backbone.View.extend({
+  el: "#top-container",
+  template: _.template($('script[name=home]').html()),
+  initialize: function() {
+    this.render();
+  },
+  render: function() {
+    this.$el.html(this.template);
+  }
+});
+
+var ProjectView = Backbone.View.extend({
+  el: "#top-container",
+  template: _.template($('script[name=projects]').html()),
+  initialize: function() {
+    this.render();
+  },
+  render: function() {
+    this.$el.html(this.template);
+  }
+});
 
 
 

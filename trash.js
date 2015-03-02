@@ -76,3 +76,40 @@ trash.js
     }, 600);
     this.afterRender();
   },
+
+
+
+
+
+
+// tried to fix jumping images in linkListView
+  var linkListViewWidth = function linkListViewWidth(){
+    var totalWidth = 0;
+    $.each($('.link-image'), function(i, child){
+      totalWidth += $(child).width();
+    });
+    return totalWidth;
+  };
+  
+  app.linkListViewWidth = linkListViewWidth();
+
+
+
+
+//after growLink and blep refactor
+    growLinkOnHoverMobile: function() {
+    $('.link-image').hover(function() {
+      $(this).stop(true, false).animate({
+        width: "75px",
+        marginTop: -35,
+        marginLeft: -10
+      },200);
+    },
+    function() {
+      $(this).stop(true, false).animate({
+        width: "60px",
+        marginTop: 0,
+        marginLeft: 0
+      },600);
+    });
+  },

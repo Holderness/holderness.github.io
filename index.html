@@ -9,21 +9,10 @@
 </head>
 
 <body>
+  
+  <div id="top-container"></div>
 
   <div>
-
-    <div class="pig-image">
-      <img class="fly-pig" src="css/images/fly-pig-serious2.png">
-      <img class="fly-pig-tongue" src="css/images/fly-pig-serious2-tongue.png">
-      <img class="fly-pig-snout" src="css/images/fly-pig-serious2-snout.png">
-      <img class="fly-pig-closed-eyes" src="css/images/closed-eyes.png">
-    </div>
-
-    <div class="header">
-      <h1>Anderson Holderness</h1>
-      <h2>WRITER. &nbsp;&nbsp; TINKERER. &nbsp;&nbsp; WEB DEVELOPER.</h2>
-    </div>
-
     <ul class="nav" id="nav" role="navigation">
       <li><a href="#contact" id="contact" class="bold-nav">Contact</a></li>
       <li>|</li>
@@ -32,14 +21,12 @@
       <li><a href="http://www.salttooth.co/p/creative-writing-publications.html" id="fiction">Fiction</a></li>
     </ul>
     
-    
     <h3 id="footer"></h3>
 
     <div class="note-wrapper">
        <h5 id="note">This site uses jQuery and Backbone.js</h5>
     </div>
    
-
   </div>
 
 
@@ -47,6 +34,32 @@
   <script src="javascripts/vendor/jquery.js"></script>
   <script src="javascripts/vendor/underscore.js"></script>
   <script src="javascripts/vendor/backbone.js"></script> 
+
+  <script type="text/template" name="home">
+    <div>
+      <div class="pig-image">
+        <img class="fly-pig" src="css/images/fly-pig-serious2.png">
+        <img class="fly-pig-tongue" src="css/images/fly-pig-serious2-tongue.png">
+        <img class="fly-pig-snout" src="css/images/fly-pig-serious2-snout.png">
+        <img class="fly-pig-closed-eyes" src="css/images/closed-eyes.png">
+      </div>
+
+      <div class="header">
+        <h1>Anderson Holderness</h1>
+        <h2>WRITER. &nbsp;&nbsp; TINKERER. &nbsp;&nbsp; WEB DEVELOPER.</h2>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" name="projects">
+      <div class ="project-about">
+        <h3><%= title %></h3>
+        <p><%= description %></p>
+      </div>
+      <div class="project-image">
+        <img src='<%= image %>'>
+      </div>
+  </script>
 
   <script src="javascripts/models.js"></script>
   <script src="javascripts/collections.js"></script>

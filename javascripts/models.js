@@ -1,3 +1,7 @@
 var LinkItem = Backbone.Model.extend({
-	url: "/contact"
+	url: "/link-carousel"
+});
+
+var Project = Backbone.Model.extend({
+  url: "/portfolio"
 });
