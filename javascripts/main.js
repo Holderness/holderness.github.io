@@ -63,20 +63,7 @@ var hangmanglerProject = new Project({
 
 $(function(){
 
-  var pigTongueBlep = function pigTongueBlep(marginTop, marginLeft) {
-    $('.pig-image').hover(function() {
-      $('.fly-pig-tongue').stop(true, false).animate({
-        marginTop: 0,
-        marginLeft: 0
-      }, 2000);
-    },
-    function() {
-      $('.fly-pig-tongue').stop(true, false).animate({
-        marginTop: marginTop,
-        marginLeft: marginLeft
-      }, 200);
-    });
-  };
+
 
   var blinkityPig = function blinkityPig(){
     setTimeout(function(){
@@ -121,12 +108,6 @@ $(function(){
     });
   };
 
-
-  if ($(window).width() < 650) {
-    pigTongueBlep(-9,-3);
-  } else {
-    pigTongueBlep(-18, -7);
-  }
 
 
   blinkMyPig();

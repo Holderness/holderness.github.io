@@ -2,8 +2,8 @@
 
 #top-container {
   height: 500px;
-  overflow: hidden;
   margin: 0 auto;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -220,8 +220,14 @@ body {
 
 
 @media (max-width: 650px) {
+  #top-container {
+    min-width: 500px;
+  }
   .welcome {
-  padding-top: 140px;
+    padding-top: 140px;
+  }
+  .welcome-container {
+    padding-top: 85px;
   }
   .welcome-name {
     font-size: 38px;
@@ -230,13 +236,28 @@ body {
   	font-size: 16px;
   	margin: -25px 0 30px 0;
   }
+  .project-about {
+    width: 450px;
+  }
+  .project-about a{
+    left: 132px;
+  }
+  .project-image {
+    width: 0;
+
+  }
+  .project-image img {
+    float: left;
+    height: 150px;
+    margin: 249px 0px 0 -335px;
+  }
   li {
     display: block;
     padding: 5px;
   }
   .link-image {
     max-width: 75px;
-    min-width:60px;
+    min-width: 60px;
     width: 60px;
   }
   .link {
