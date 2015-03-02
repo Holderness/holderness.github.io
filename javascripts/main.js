@@ -54,7 +54,7 @@ var waiterProject = new Project( {
 var hangmanglerProject = new Project({
   title: "Hangmangler Helper",
   subtitle: "Gaming App",
-  description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and an existentialist twist.",
+  description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and existentialism.",
   technologies: "Sinatra, jQuery, PostgreSQL, Bcrypt, AJAX",
   image: "css/images/hangmangler-project.png",
   link: "#pigcave"

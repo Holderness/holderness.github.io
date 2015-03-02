@@ -96,6 +96,12 @@
   text-align: left;
 }
 
+.project-about a {
+  text-decoration: none;
+  position: absolute;
+  top: 380px;
+}
+
 
 /*  link carousel */
 
