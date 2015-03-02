@@ -66,8 +66,8 @@
 /* project view */
 
 .project-container {
+  min-width: 1100px;
   padding-top: 75px;
-  
 }
 
 .project-image {
@@ -81,7 +81,7 @@
 
 .project-about {
   float: left;
-  margin: 0 20px 0 50px;
+  margin: 0 20px 0 80px;
   width: 35%;
 }
 
