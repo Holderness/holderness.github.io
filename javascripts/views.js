@@ -49,22 +49,6 @@ var LinkListView = Backbone.View.extend({
       },600);
     });
   },
-  growLinkOnHoverMobile: function() {
-    $('.link-image').hover(function() {
-      $(this).stop(true, false).animate({
-        width: "75px",
-        marginTop: -35,
-        marginLeft: -10
-      },200);
-    },
-    function() {
-      $(this).stop(true, false).animate({
-        width: "60px",
-        marginTop: 0,
-        marginLeft: 0
-      },600);
-    });
-  },
   linkCarousel: function(duration, startPosition, endPosition, slideIn) {
     var elleft = $('#link-list-view').offset().left;
     var opacityStart = (slideIn === false) ? 1 : 0;
@@ -123,7 +107,7 @@ var HomeView = Backbone.View.extend({
     this.render();
   },
   render: function() {
-    this.$el.html(this.template);
+    this.$el.html(this.template).hide().fadeIn(700);
   }
 });
 
@@ -134,7 +118,9 @@ var ProjectView = Backbone.View.extend({
     this.render();
   },
   render: function() {
-    this.$el.html(this.template);
+    this.$el.empty();
+    var attributes = this.model.toJSON();
+    this.$el.html(this.template(attributes)).hide().fadeIn(700);
   }
 });
 

@@ -34,21 +34,21 @@ var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 
 
 var pigcaveProject = new Project( {
-  title: "blurg",
-  description: "blah",
-  image: "blag"
+  title: "Pig Cave",
+  description: "blahdsfasdf, adddddfadsfasdfasd fasdfasdfasdfasdf adsfadsfasdfasdf adfasdfasdfa adsfadsf",
+  image: "css/images/pig-cave-project.png"
 });
 
 var waiterProject = new Project( {
-  title: "blurg",
-  description: "blah",
-  image: "blag"
+  title: "Waiter",
+  description: "adfasdfasdfadsf adfasdf afdadsf adfadsf adfadsf adfadsf adfadf",
+  image: "css/images/waiter-project.png"
 });
 
 var hangmanglerProject = new Project({
-  title: "blurg",
-  description: "blah",
-  image: "blag"
+  title: "Hangmangler Helper",
+  description: "adfasdfasdfadsf adfasdf afdadsf adfadsf adfadsf adfadsf adfadf",
+  image: "css/images/hangmangler-project.png"
 });
 
 
@@ -125,7 +125,7 @@ $(function(){
 
 
   // resets animations on screen resize
-  $(window).resize(function(){ location.reload();});
+  // $(window).resize(function(){ location.reload();});
 
 
 

@@ -15,6 +15,7 @@ var AppRouter = Backbone.Router.extend({
     this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
                                                    className: "portfolio"});
     this.navLinkListView.goto(this.portfolioLinkListView);
+    this.projectView = new ProjectView({model: pigcaveProject});
     // this.portfolioLinkListView.render();
   }
 });

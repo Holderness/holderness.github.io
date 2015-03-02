@@ -1,33 +1,31 @@
-body {
-  min-width: 500px;
-  color: #000000;
-  font-family: 'Forum', futura;
-  font-size: 16px;
+
+
+#top-container {
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/*  slides  */
+/* home view */
 
-
-.header {
+.welcome {
   padding-top: 260px;
   text-align: center;
 }
 
-#footer {
-  padding-top: 40px;
-  text-align: center;
+.welcome-name {
+  -webkit-text-stroke: 1px #000000;
+  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
+  font-size: 60px;
 }
 
-.link {
-  display: inline-block;
-  padding: 20px 120px 90px 15px;
-}
-
-.link-image {
-  min-width: 90px;
-  width: 90px;
-  position: absolute;
-  text-align: center;
+.welcome-professions {
+  -webkit-text-stroke: .7px #000000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: 23px;
+  margin: -40px 0 40px 0;
 }
 
 .pig-image {
@@ -62,12 +60,72 @@ body {
   visibility: hidden;
 }
 
-.arrow {
-  width: 145px;
-  position: absolute;
-  margin-left: 326px;
-  margin-top: -51px;
+
+
+
+/* project view */
+
+.project-container {
+  padding-top: 75px;
+  
 }
+
+.project-image {
+  float: left;
+  width: 55%;
+}
+
+.project-image img {
+  height: 400px;
+}
+
+.project-about {
+  float: left;
+  margin: 0 20px 0 50px;
+  width: 35%;
+}
+
+.project-about h1 {
+  -webkit-text-stroke: .7px #000000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+}
+
+
+
+/*  link carousel */
+
+
+#footer {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 20px 120px 90px 15px;
+}
+
+.link-image {
+  min-width: 90px;
+  width: 90px;
+  position: absolute;
+  text-align: center;
+}
+
+#link-list-view {
+  position: absolute;
+  margin-left: auto;
+  margin-right:auto;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+/* nav bar */
 
 .bold-nav {
   font-weight: 900;
@@ -89,13 +147,9 @@ body {
   display: inline;
 }
 
-#link-list-view {
-  position: absolute;
-  margin-left: auto;
-  margin-right:auto;
-  left: 0;
-  right: 0;
-}
+
+
+/* elements */
 
 a, a:active, a:focus {
   outline: none;
@@ -114,20 +168,19 @@ a:hover {
   text-shadow: .7px -.7px #E18484
 }
 
-h1 {
-  -webkit-text-stroke: 1px #000000;
-  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
-  font-size: 60px;
+body {
+  min-width: 500px;
+  color: #000000;
+  font-family: 'Forum', futura;
+  font-size: 16px;
 }
 
-h2 {
-  -webkit-text-stroke: .7px #000000;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
-  font-size: 23px;
-  margin: -40px 0 40px 0;
-}
 
+
+
+
+
+/* note */
 
 .note-wrapper {
   text-align: right;
@@ -142,24 +195,35 @@ h2 {
 
 
 
+/* misc. */
+
+.arrow {
+  width: 145px;
+  position: absolute;
+  margin-left: 326px;
+  margin-top: -51px;
+}
+
+
+
 
 
 
 
 @media (max-width: 650px) {
-  h1 {
+  .welcome {
+  padding-top: 140px;
+  }
+  .welcome-name {
     font-size: 38px;
   }
-  h2 {
+  .welcome-professions {
   	font-size: 16px;
   	margin: -25px 0 30px 0;
   }
   li {
     display: block;
     padding: 5px;
-  }
-  .header {
-  padding-top: 140px;
   }
   .link-image {
     max-width: 75px;
