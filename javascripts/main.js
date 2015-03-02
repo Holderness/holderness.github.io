@@ -35,19 +35,25 @@ var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 
 var pigcaveProject = new Project( {
   title: "Pig Cave",
-  description: "blahdsfasdf, adddddfadsfasdfasd fasdfasdfasdfasdf adsfadsfasdfasdf adfasdfasdfa adsfadsf",
+  subtitle: "Story-creation App",
+  description: "This app's foundation is a word-sorting algorithm that pairs similar texts together. The data comes from two websites I scraped and is housed in an API built on Rails. The original images were drawn in Photoshop and animated with Skrollr.js.",
+  technologies: "Backbone.js, Skrollr.js, jQuery, Ruby on Rails, JSON, Photoshop",
   image: "css/images/pig-cave-project.png"
 });
 
 var waiterProject = new Project( {
   title: "Waiter",
-  description: "adfasdfasdfadsf adfasdf afdadsf adfadsf adfadsf adfadsf adfadf",
+  subtitle: "Restaurant Management CRUD App",
+  description: "The system allows users to keep track of orders, tables, and menu items. The design is minimal and tight for quick interaction on mobile devices.",
+  technologies: "Sinatra, jQuery, PostgreSQL",
   image: "css/images/waiter-project.png"
 });
 
 var hangmanglerProject = new Project({
   title: "Hangmangler Helper",
-  description: "adfasdfasdfadsf adfasdf afdadsf adfadsf adfadsf adfadsf adfadf",
+  subtitle: "Gaming App",
+  description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and an existentialist twist.",
+  technologies: "Sinatra, jQuery, PostgreSQL, Bcrypt, AJAX",
   image: "css/images/hangmangler-project.png"
 });
 
