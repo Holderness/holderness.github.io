@@ -2,7 +2,10 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     "": "contact",
     "contact": "contact",
-    "portfolio": "portfolio"
+    "portfolio": "portfolio",
+    "waiter": "waiter",
+    "hangmangler": "hangmangler",
+    "pigcave": "pigcave"
   },
   contact: function() {
     this.contactLinkListView = new LinkListView({collection: contactlinkList,
@@ -15,8 +18,17 @@ var AppRouter = Backbone.Router.extend({
     this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
                                                    className: "portfolio"});
     this.navLinkListView.goto(this.portfolioLinkListView);
-    this.projectView = new ProjectView({model: pigcaveProject});
+    this.pigcaveProjectView = new ProjectView({model: pigcaveProject});
     // this.portfolioLinkListView.render();
+  },
+  waiter: function() {
+    this.waiterProjectView = new ProjectView({model: waiterProject});
+  },
+  hangmangler: function() {
+    this.hangmanglerProjectView = new ProjectView({model: hangmanglerProject});
+  },
+  pigcave: function() {
+    this.pigcaveProjectView.render();
   }
 });
 

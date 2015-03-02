@@ -92,6 +92,9 @@
   font-size: 30px;
 }
 
+.project-about p {
+  text-align: left;
+}
 
 
 /*  link carousel */
