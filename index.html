@@ -50,11 +50,16 @@
   <script type="text/template" name="projects">
     <div class="project-container">
       <div class ="project-about">
-        <h1><%= title %></h1>
+        <h1>
+          <%= title %>
+          <a class="project-github-link" href=<%= github %>>
+            <img src=<%= githubIcon %>>
+          </a>
+        </h1>
         <h3><%= subtitle %></h3>
         <p><%= description %></p>
         <p>Technologies: <%= technologies %></p>
-        <a href=<%= link %>>
+        <a class="project-next-button" href=<%= link %>>
           <img class="project-next-button-img" src="css/images/next-icon.png">
         </a>
       </div>

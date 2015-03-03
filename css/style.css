@@ -89,18 +89,28 @@
   -webkit-text-stroke: .7px #000000;
   -webkit-font-smoothing: antialiased;
   font-family: 'Lato', sans-serif;
-  font-size: 30px;
+  font-size: 33px;
 }
 
 .project-about p {
   text-align: left;
 }
 
-.project-about a {
+.project-next-button {
   text-decoration: none;
   position: absolute;
   top: 380px;
   margin-left: -35px;
+}
+
+.project-about h1 a {
+  display: inline;
+}
+
+.project-github-link img {
+  width: 30px;
+  margin-bottom: -4px;
+  padding-left: 6px;
 }
 
 
