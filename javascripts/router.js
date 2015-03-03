@@ -4,8 +4,6 @@ var AppRouter = Backbone.Router.extend({
     "contact": "contact",
     "portfolio": "portfolio",
     "portfolio/:project": "project",
-    "hangmangler": "hangmangler",
-    "pigcave": "pigcave"
   },
   contact: function() {
     this.contactLinkListView = new LinkListView({collection: contactlinkList,
@@ -22,12 +20,12 @@ var AppRouter = Backbone.Router.extend({
     // this.portfolioLinkListView.render();
   },
   project: function(project){
-    var projectModelList = {
+    var projectList = {
       waiter: waiterProject,
       pigcave: pigcaveProject,
       hangmangler: hangmanglerProject
     };
-    this.projectView = new ProjectView({model: projectModelList[project]});
+    this.projectView = new ProjectView({model: projectList[project]});
     if (!this.navLinkListView.hasOwnProperty('currentView')) {
       this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
                                                    className: "portfolio"});
@@ -40,5 +38,4 @@ var AppRouter = Backbone.Router.extend({
 
 var app = new AppRouter();
 app.navLinkListView = new NavLinkListView();
-
 Backbone.history.start();
