@@ -130,6 +130,8 @@ var HomeView = Backbone.View.extend({
   }
 });
 
+
+
 var ProjectView = Backbone.View.extend({
   el: "#top-container",
   template: _.template($('script[name=projects]').html()),
