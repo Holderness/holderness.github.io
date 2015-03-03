@@ -229,11 +229,11 @@ body {
 }
 .project-next-button-img:hover {
     -webkit-animation-name: rotate; 
-    -webkit-animation-duration: 2s; 
+    -webkit-animation-duration: 6s; 
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: rotate; 
-    -moz-animation-duration: 2s; 
+    -moz-animation-duration: 6s; 
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
 }
