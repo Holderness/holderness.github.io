@@ -39,7 +39,7 @@ var pigcaveProject = new Project( {
   description: "This app's foundation is a word-sorting algorithm that pairs similar texts together. The data comes from two websites I scraped and is housed in an API built on Rails. The original images were drawn in Photoshop and animated with Skrollr.js.",
   technologies: "Backbone.js, Skrollr.js, jQuery, Ruby on Rails, JSON, Photoshop",
   image: "css/images/pig-cave-project.png",
-  link: "#waiter"
+  link: "#portfolio/waiter"
 });
 
 var waiterProject = new Project( {
@@ -48,7 +48,7 @@ var waiterProject = new Project( {
   description: "The system allows users to keep track of orders, tables, and menu items. The design is minimal and tight for quick interaction on mobile devices.",
   technologies: "Sinatra, jQuery, PostgreSQL",
   image: "css/images/waiter-project.png",
-  link: "#hangmangler"
+  link: "#portfolio/hangmangler"
 });
 
 var hangmanglerProject = new Project({
@@ -57,7 +57,7 @@ var hangmanglerProject = new Project({
   description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and existentialism.",
   technologies: "Sinatra, jQuery, PostgreSQL, Bcrypt, AJAX",
   image: "css/images/hangmangler-project.png",
-  link: "#pigcave"
+  link: "#portfolio/pigcave"
 });
 
 

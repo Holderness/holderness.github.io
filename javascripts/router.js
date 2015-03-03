@@ -3,7 +3,7 @@ var AppRouter = Backbone.Router.extend({
     "": "contact",
     "contact": "contact",
     "portfolio": "portfolio",
-    "waiter": "waiter",
+    "portfolio/:project": "project",
     "hangmangler": "hangmangler",
     "pigcave": "pigcave"
   },
@@ -21,24 +21,13 @@ var AppRouter = Backbone.Router.extend({
     this.pigcaveProjectView = new ProjectView({model: pigcaveProject});
     // this.portfolioLinkListView.render();
   },
-  waiter: function() {
-    this.waiterProjectView = new ProjectView({model: waiterProject});
-    if (!this.navLinkListView.hasOwnProperty('currentView')) {
-      this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
-                                                   className: "portfolio"});
-      this.navLinkListView.goto(this.portfolioLinkListView);
-    }
-  },
-  hangmangler: function() {
-    this.hangmanglerProjectView = new ProjectView({model: hangmanglerProject});
-    if (!this.navLinkListView.hasOwnProperty('currentView')) {
-      this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
-                                                   className: "portfolio"});
-      this.navLinkListView.goto(this.portfolioLinkListView);
-    }
-  },
-  pigcave: function() {
-    this.pigcaveProjectView.render();
+  project: function(project){
+    var projectModelList = {
+      waiter: waiterProject,
+      pigcave: pigcaveProject,
+      hangmangler: hangmanglerProject
+    };
+    this.projectView = new ProjectView({model: projectModelList[project]});
     if (!this.navLinkListView.hasOwnProperty('currentView')) {
       this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
                                                    className: "portfolio"});
