@@ -4,6 +4,7 @@ var AppRouter = Backbone.Router.extend({
     "contact": "contact",
     "portfolio": "portfolio",
     "portfolio/:project": "project",
+    "writing": "writing"
   },
   contact: function() {
     this.contactLinkListView = new LinkListView({collection: contactlinkList,
@@ -31,6 +32,9 @@ var AppRouter = Backbone.Router.extend({
                                                    className: "portfolio"});
       this.navLinkListView.goto(this.portfolioLinkListView);
     }
+  },
+  writing: function() {
+    this.writingView = new WritingView({});
   }
 });
 
