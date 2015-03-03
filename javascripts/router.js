@@ -23,12 +23,27 @@ var AppRouter = Backbone.Router.extend({
   },
   waiter: function() {
     this.waiterProjectView = new ProjectView({model: waiterProject});
+    if (!this.navLinkListView.hasOwnProperty('currentView')) {
+      this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
+                                                   className: "portfolio"});
+      this.navLinkListView.goto(this.portfolioLinkListView);
+    }
   },
   hangmangler: function() {
     this.hangmanglerProjectView = new ProjectView({model: hangmanglerProject});
+    if (!this.navLinkListView.hasOwnProperty('currentView')) {
+      this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
+                                                   className: "portfolio"});
+      this.navLinkListView.goto(this.portfolioLinkListView);
+    }
   },
   pigcave: function() {
     this.pigcaveProjectView.render();
+    if (!this.navLinkListView.hasOwnProperty('currentView')) {
+      this.portfolioLinkListView = new LinkListView({collection: portfoliolinkList,
+                                                   className: "portfolio"});
+      this.navLinkListView.goto(this.portfolioLinkListView);
+    }
   }
 });
 
