@@ -35,6 +35,9 @@ var AppRouter = Backbone.Router.extend({
   },
   writing: function() {
     this.writingView = new WritingView({});
+    this.writingLinkListView = new LinkListView({collection: writinglinkList,
+                                                   className: "writing"});
+    this.navLinkListView.goto(this.writingLinkListView);
   }
 });
 

@@ -28,9 +28,14 @@ var hangmanglerLink = new LinkItem( {
   image: "css/images/hangmangler-icon.png"
 });
 
+var publicationLink = new LinkItem( {
+  url: "http://www.salttooth.co/p/creative-writing-publications.html",
+  image: "css/images/mermaids-purse.png"
+});
+
 var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
 var portfoliolinkList = new LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
-var fictionlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
+var writinglinkList = new LinkList([ publicationLink ]);
 
 
 var pigcaveProject = new Project( {

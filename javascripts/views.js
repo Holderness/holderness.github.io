@@ -93,6 +93,20 @@ var NavLinkListView = Backbone.View.extend({
           next.linkCarousel(600, -250, -250, true);
           next.afterRender();
         }, 500);
+      } else if (next.className === "writing") {
+        previous.linkCarousel(500, 0, 250, false);
+        setTimeout(function(){
+          _this.$el.html(next.$el);
+          next.linkCarousel(600, 250, 250, true);
+          next.afterRender();
+        }, 500);
+      } else if (previous.className === "writing") {
+        previous.linkCarousel(500, 0, -250, false);
+        setTimeout(function(){
+          _this.$el.html(next.$el);
+          next.linkCarousel(600, -250, -250, true);
+          next.afterRender();
+        }, 500);
       }
 
       this.currentView = next;
