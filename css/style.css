@@ -21,6 +21,8 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
 }
 
 .fly-pig {
@@ -351,8 +353,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
   .pig-image {
     width: 600px;
-    left: calc(50% - 300px);
-    transform: none;
   }
 
 
