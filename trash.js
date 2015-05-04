@@ -113,3 +113,32 @@ trash.js
       },600);
     });
   },
+
+
+
+/* html and css for name and professions intro */
+      <div class="welcome-container">
+      <div class="welcome">
+        <h1 class="welcome-name">Anderson Holderness</h1>
+        <h2 class="welcome-professions">WRITER. &nbsp;&nbsp; TINKERER. &nbsp;&nbsp; WEB DEVELOPER.</h2>
+      </div>
+    </div>
+
+.welcome {
+  padding-top: 260px;
+  text-align: center;
+}
+
+.welcome-name {
+  -webkit-text-stroke: 1px #000000;
+  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
+  font-size: 60px;
+}
+
+.welcome-professions {
+  -webkit-text-stroke: .7px #000000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: 23px;
+  margin: -40px 0 40px 0;
+}

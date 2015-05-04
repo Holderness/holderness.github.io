@@ -129,7 +129,7 @@ var HomeView = Backbone.View.extend({
     }
   },
   pigTongueBlep: function(marginTop, marginLeft) {
-    $('.pig-image').hover(function() {
+    $('.pig-image-container').hover(function() {
       $('.fly-pig-tongue').stop(true, false).animate({
         marginTop: 0,
         marginLeft: 0

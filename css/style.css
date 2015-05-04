@@ -4,59 +4,36 @@
   height: 500px;
   margin: 0 auto;
   overflow: hidden;
-  text-align: center;
 }
+
+
 
 /* home view */
 
-.welcome {
-  padding-top: 260px;
+.pig-image-container {
+  height: 500px;
+  margin: 144px 0 0 -265px;
   text-align: center;
-}
-
-.welcome-name {
-  -webkit-text-stroke: 1px #000000;
-  font-family: Garamond, Baskerville, Georgia, "Times New Roman", serif;
-  font-size: 60px;
-}
-
-.welcome-professions {
-  -webkit-text-stroke: .7px #000000;
-  -webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
-  font-size: 23px;
-  margin: -40px 0 40px 0;
 }
 
 .pig-image {
-  margin: 90px 0 0 -265px;
-  text-align: center;
+  min-width: 150px;
+  width: 300px;
+  position: absolute;
 }
 
 .fly-pig {
-  min-width: 150px;
-  width: 300px;
-  position: absolute;
 }
 
 .fly-pig-snout {
-  min-width: 150px;
-  width: 300px;
-  position: absolute;
 }
 
 .fly-pig-tongue {
-  min-width: 150px;
-  width: 300px;
-  position: absolute;
   overflow: hidden;
   margin: -18px 0 0 -7px;
 }
 
 .fly-pig-closed-eyes {
-  min-width: 150px;
-  width: 300px;
-  position: absolute;
   visibility: hidden;
 }
 
@@ -326,25 +303,21 @@ body {
     display: inline;
     padding: 20px 75px 90px 10px;
   }
-  .pig-image {
+  .pig-image-container {
     margin-left: -140px;
   }
-  .fly-pig {
+  .pig-image {
     width: 100px;
     position: absolute;
+  }
+  .fly-pig {
   }
   .fly-pig-snout {
-    width: 100px;
-    position: absolute;
   }
   .fly-pig-tongue {
-    width: 100px;
     margin: -9px 0 0 -3px;
-    position: absolute;
   }
   .fly-pig-closed-eyes {
-    width: 100px;
-    position:absolute;
     visibility: hidden;
   }
   .arrow {
@@ -352,5 +325,36 @@ body {
     position: absolute;
     margin-left: 200px;
     margin-top: -43px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+  .pig-image-container {
+
+  }
+  .pig-image {
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .fly-pig {
+  }
+  .fly-pig-snout {
+  }
+  .fly-pig-tongue {
+    margin: -9px 0 0 -3px;
+  }
+  .fly-pig-closed-eyes {
+    visibility: hidden;
   }
 }
