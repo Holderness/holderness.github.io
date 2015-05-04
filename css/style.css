@@ -12,14 +12,15 @@
 
 .pig-image-container {
   height: 500px;
-  margin: 144px 0 0 -265px;
-  text-align: center;
+  padding-top: 150px;
 }
 
 .pig-image {
   min-width: 150px;
   width: 300px;
   position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
 }
 
 .fly-pig {
@@ -335,26 +336,52 @@ body {
 
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+
+/* top container */
+  #top-container {
+    height: 1000px;
+  }
 
   .pig-image-container {
-
+    padding-top: 300px;
+    position: relative;
   }
   .pig-image {
     width: 600px;
-    position: relative;
-    margin: 0 auto;
   }
-  .fly-pig {
+
+
+/* nav */
+  .bold-nav {
+    font-weight: 900;
+    font-size:70px;
   }
-  .fly-pig-snout {
+
+  .nav {
+    text-align: center;
+    font-size: 60px;
+    padding-right: 0;
   }
-  .fly-pig-tongue {
-    margin: -9px 0 0 -3px;
+
+  .nav a {
+    text-decoration: none;
+    padding: 0 .5em 0 .5em;
   }
-  .fly-pig-closed-eyes {
-    visibility: hidden;
+
+
+/* links/footer */
+  .link-image {
+    width: 200px;
   }
+  .link {
+    display: inline-block;
+    padding: 20px 230px 90px 60px;
+  }
+  #link-list-view {
+    position: absolute;
+  }
+
 }
