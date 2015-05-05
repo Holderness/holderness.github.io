@@ -399,7 +399,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* portfolio views */
 
   .project-about-container {
-    height: 500px
+    height: 550px
   }
 
   .project-about {
@@ -421,14 +421,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .project-next-button {
     float: left;
-
+    margin: -230px 0 0 90px;
   }
 
   .project-next-button img {
      position: absolute;
      width: 100px;
-     margin: -215px 0 0 88px;
-     z-index: 555;
   }
 
 }
