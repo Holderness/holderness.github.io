@@ -101,6 +101,7 @@
 
 .writing-container {
   margin-top: 65px;
+  min-width: 1000px;
 }
 
 .writing-img-container {
@@ -109,6 +110,7 @@
 }
 .writing-img-container img {
   height: 400px;
+  padding-left: 150px;
 }
 
 .writing-text-container {
@@ -131,6 +133,7 @@
 
 .writing-img-footer {
   font-size: 13px;
+  padding-left: 150px;
 }
 
 
@@ -255,12 +258,12 @@ body {
 
 
 @media (max-width: 1000px) {
-  .writing-img-container img {
-    display: none;
+/*  .writing-img-container img {
+    overflow: hidden;
   }
   .writing-img-footer {
-    display: none;
-  }
+    overflow: auto;
+  }*/
 }
 
 
@@ -450,7 +453,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    
+
 /* top container */
 
   #top-container {
