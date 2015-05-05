@@ -77,8 +77,16 @@
 }
 
 .project-next-button {
+  float: left;
   text-decoration: none;
+  margin: -100px 0 0 250px;
 }
+
+.project-next-button-img {
+
+}
+
+
 
 .project-about h1 a {
   display: inline;
