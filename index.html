@@ -43,6 +43,7 @@
 
   <script type="text/template" name="projects">
     <div class="project-container">
+    <div class="project-about-container">
       <div class ="project-about">
         <h1>
           <%= title %>
@@ -53,14 +54,15 @@
         <h3><%= subtitle %></h3>
         <p><%= description %></p>
         <p>Technologies: <%= technologies %></p>
-        <a class="project-next-button" href=<%= link %>>
-          <img class="project-next-button-img" src="css/images/next-icon.png">
-        </a>
+      </div>
       </div>
       <div class="project-image">
         <img src=<%= image %>>
       </div>
     </div>
+        <a class="project-next-button" href=<%= link %>>
+         <img class="project-next-button-img" src="css/images/next-icon.png">
+        </a>
   </script>
 
   <script type="text/template" name="writing">
