@@ -268,7 +268,7 @@ body {
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   #top-container {
     min-width: 500px;
   }
@@ -316,10 +316,9 @@ body {
     margin-left: -140px;
   }
   .pig-image {
-    width: 100px;
-    position: absolute;
+    left: 265px;
   }
-  .fly-pig {
+/*  .fly-pig {
   }
   .fly-pig-snout {
   }
@@ -328,13 +327,13 @@ body {
   }
   .fly-pig-closed-eyes {
     visibility: hidden;
-  }
-  .arrow {
+  }*/
+/*  .arrow {
     width: 100px;
     position: absolute;
     margin-left: 200px;
     margin-top: -43px;
-  }
+  }*/
 
   .project-next-button {
     margin: -100px 0 0 100px;
@@ -451,6 +450,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     margin-top: 150px;
     width: 86%;
   }
+
+  .writing-img-container {
+     display: none;
+   }
 
 
 }

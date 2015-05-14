@@ -35,14 +35,14 @@ var LinkListView = Backbone.View.extend({
     console.log("growLinkOnHover loaded");
     var originalWidth = $('.link-image').width();
     $('.link-image').hover(function() {
-      $(this).stop(true, true).animate({
+      $(this).stop(true, false).animate({
         width: growWidth,
         marginTop: marginTop,
         marginLeft: marginLeft
       },200);
     },
     function(){
-      $(this).stop(true, true).animate({
+      $(this).stop(true, false).animate({
         width: originalWidth,
         marginTop: 0,
         marginLeft: 0
@@ -122,11 +122,7 @@ var HomeView = Backbone.View.extend({
   },
   render: function() {
     this.$el.html(this.template).hide().fadeIn(700);
-    if ($(window).width() < 650) {
-      this.pigTongueBlep(-9,-3);
-    } else {
-      this.pigTongueBlep(-18, -7);
-    }
+    this.pigTongueBlep(-18, -7);
   },
   pigTongueBlep: function(marginTop, marginLeft) {
     $('.pig-image-container').hover(function() {
