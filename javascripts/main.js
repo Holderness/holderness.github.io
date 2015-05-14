@@ -126,7 +126,7 @@ $(function(){
 
 
   // resets animations on screen resize
-  // $(window).resize(function(){ location.reload();});
+  $(window).resize(function(){ location.reload();});
 
 
 

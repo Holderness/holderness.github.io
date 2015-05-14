@@ -166,6 +166,7 @@
   margin-right:auto;
   left: 0;
   right: 0;
+  white-space: nowrap;
 }
 
 
@@ -338,10 +339,21 @@ body {
   .project-next-button {
     margin: -100px 0 0 100px;
   }
+
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 500px) {
+  .footer-container #footer {
+    text-align: left;
+  }
+
+  #link-list-view {
+     left: 127px;
+     margin-left: 0px;
+     margin-right: 0px;
+   }
+
 
 }
 
