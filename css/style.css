@@ -467,6 +467,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
      display: none;
   }
 
+  #footer {
+    padding-top: 0px;
+  }
+
 
 }
 
@@ -570,6 +574,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .writing-img-container {
      display: none;
+  }
+
+
+  #footer {
+    padding-top: 0px;
   }
 
 
