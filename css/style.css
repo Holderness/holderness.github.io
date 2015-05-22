@@ -105,17 +105,18 @@
 }
 
 .writing-img-container {
-  float: left;
+  text-align: left;
   width: 55%;
+
 }
 .writing-img-container img {
   height: 400px;
-  padding-left: 150px;
+  padding-left: 50px;
 }
 
 .writing-text-container {
-  float: left;
-  margin: 0 20px 0 80px;
+  float: right;
+  margin: 0 50px 0 0;
   width: 35%;
   min-width: 336px;
 }
@@ -216,7 +217,7 @@ a:hover {
 }
 
 body {
-  min-width: 500px;
+  min-width: 450px;
   color: #000000;
   font-family: 'Forum', futura;
   font-size: 16px;
@@ -258,23 +259,21 @@ body {
 
 
 
-@media (max-width: 1000px) {
-/*  .writing-img-container img {
-    overflow: hidden;
-  }
-  .writing-img-footer {
-    overflow: auto;
-  }*/
-}
+
+
+
+
 
 
 @media (max-width: 650px) {
 
 
+  #top-container {
+    margin: 0;
+    width: 450px;
+  }
 
 /* contact page */
-
-
 
 
 /*project page*/
@@ -299,9 +298,14 @@ body {
   }
 
 /* writing page */
-
+.writing-container {
+  min-width: 450px;
+}
 .writing-img-container {
   display: none;
+}
+.writing-text-container {
+  margin: 0 20px 0 80px;
 }
 
 
