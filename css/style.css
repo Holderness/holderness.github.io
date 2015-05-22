@@ -3,7 +3,7 @@
 #top-container {
   height: 485px;
   margin: 0 auto;
-  overflow: hidden;
+
 }
 
 
@@ -100,7 +100,7 @@
 
 
 .writing-container {
-  margin-top: 65px;
+  padding-top: 65px;
   min-width: 1000px;
 }
 
@@ -268,45 +268,58 @@ body {
 }
 
 
-@media (max-width: 500px) {
-  #top-container {
-    min-width: 500px;
-  }
-  .welcome {
-    padding-top: 140px;
-  }
-  .welcome-container {
-    padding-top: 85px;
-  }
-  .welcome-name {
-    font-size: 38px;
-  }
-  .welcome-professions {
-  	font-size: 16px;
-  	margin: -25px 0 30px 0;
+@media (max-width: 650px) {
+
+
+
+/* contact page */
+
+
+
+
+/*project page*/
+
+  .project-container {
+    min-width: 450px;
   }
   .project-about {
-    width: 450px;
+    width: 320px;
   }
-  .project-about a{
-    left: 132px;
-  }
+
   .project-image {
     width: 0;
   }
   .project-image img {
     float: left;
-    height: 150px;
-    margin: 249px 0px 0 -335px;
+    height: 120px;
+    margin: 280px 0px 0 -220px;
   }
-  li {
-    display: block;
-    padding: 5px;
+  .project-next-button {
+    margin: -100px 0 0 100px;
   }
+
+/* writing page */
+
+.writing-img-container {
+  display: none;
+}
+
+
+/* navbar */
+
+  .nav {
+    text-align: left;
+    font-size: 1.17em;
+    padding-left: 80px;
+  }
+
   .link-image {
     max-width: 75px;
     min-width: 60px;
     width: 60px;
+  }
+  #mermaids-purse {
+    padding-left: 67px;
   }
   .link {
     display: inline;
@@ -318,43 +331,23 @@ body {
   .pig-image {
     left: 265px;
   }
-/*  .fly-pig {
-  }
-  .fly-pig-snout {
-  }
-  .fly-pig-tongue {
-    margin: -9px 0 0 -3px;
-  }
-  .fly-pig-closed-eyes {
-    visibility: hidden;
-  }*/
-/*  .arrow {
-    width: 100px;
-    position: absolute;
-    margin-left: 200px;
-    margin-top: -43px;
-  }*/
-
-  .project-next-button {
-    margin: -100px 0 0 100px;
-  }
-
-}
 
 
-@media (max-width: 500px) {
+
+
   .footer-container #footer {
     text-align: left;
   }
 
   #link-list-view {
-     left: 127px;
+     left: 101px;
      margin-left: 0px;
      margin-right: 0px;
    }
 
-
 }
+
+
 
 
 

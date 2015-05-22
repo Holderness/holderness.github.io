@@ -30,7 +30,8 @@ var hangmanglerLink = new LinkItem( {
 
 var publicationLink = new LinkItem( {
   url: "http://www.salttooth.co/p/creative-writing-publications.html",
-  image: "css/images/mermaids-purse.png"
+  image: "css/images/mermaids-purse.png",
+  id: "mermaids-purse"
 });
 
 var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
@@ -126,7 +127,20 @@ $(function(){
 
 
   // resets animations on screen resize
-  $(window).resize(function(){ location.reload();});
+  // $(window).resize().done(function(){ location.reload();});
+
+// var resizeTimer;
+// $(window).on('resize', function(e) {
+//   clearTimeout(resizeTimer);
+//   resizeTimer = setTimeout(function() {
+//     location.reload()      
+//   }, 250);
+// });
+// above code is the same as debouncing
+
+$(window).on('resize', _.debounce(function () {
+    location.reload();
+}, 300));
 
 
 
