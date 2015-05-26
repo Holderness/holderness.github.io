@@ -140,7 +140,7 @@ $(function(){
 
 $(window).on('resize', _.debounce(function () {
     location.reload();
-}, 250));
+}, 500));
 
 
 

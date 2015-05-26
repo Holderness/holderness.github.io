@@ -3,7 +3,6 @@
 #top-container {
   height: 485px;
   margin: 0 auto;
-
 }
 
 
@@ -101,28 +100,28 @@
 
 .writing-container {
   padding-top: 65px;
-  min-width: 1000px;
+  min-width: 1280px;
+  overflow: hidden;
 }
 
 .writing-img-container {
-  text-align: left;
-  width: 55%;
+  width: 320px;
+  padding-left: 120px;
 
 }
 .writing-img-container img {
   height: 400px;
-  padding-left: 50px;
 }
 
 .writing-text-container {
   float: right;
-  margin: 0 50px 0 0;
+  margin-right: 12%;
   width: 35%;
   min-width: 336px;
 }
 
 .writing-text-container p {
-  text-align: left;
+
 }
 
 .writing-text-container h1 {
@@ -134,7 +133,7 @@
 
 .writing-img-footer {
   font-size: 13px;
-  padding-left: 150px;
+  padding-left: 0px;
 }
 
 
