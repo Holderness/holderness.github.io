@@ -463,14 +463,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
   /* fiction view */
 
   .writing-container {
-    width: 300px;
+    min-width: 0;
     padding: 0;
   } 
 
   .writing-text-container {
     margin: 0;
     width: auto;
-    padding: 0 125px;
+    padding: 0 85px;
   }
 
   .writing-text-container h1 {
