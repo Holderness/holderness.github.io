@@ -412,8 +412,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* portfolio views */
 
+  .project-container {
+    padding-top: 0px;
+  }
+
   .project-about-container {
-    height: 550px
+    height: 500px
   }
 
   .project-about {
@@ -421,15 +425,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .project-about h1 {
-    font-size: 82.5px;
+    font-size: 67px;
   }
 
   .project-about h3 {
-    font-size: 62.5px;
+    font-size: 50px;
   }
 
   .project-about p {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .project-image {
@@ -463,6 +467,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 86%;
   }
 
+  .writing-text-container h1 {
+    font-size: 67px;
+  }
+
+  .writing-text-container p {
+    font-size: 40px;
+  }
+
   .writing-img-container {
      display: none;
   }
@@ -473,6 +485,41 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -538,7 +585,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* portfolio views */
 
   .project-about-container {
-    height: 550px
+    height: 500px
   }
 
   .project-about {
