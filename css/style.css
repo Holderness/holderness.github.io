@@ -50,12 +50,14 @@
 }
 
 .project-image {
-  float: left;
+  float: right;
   width: 55%;
+  text-align: right;
 }
 
 .project-image img {
   height: 400px;
+  margin-right: 100px;
 }
 
 .project-about {
@@ -78,7 +80,7 @@
 .project-next-button {
   float: left;
   text-decoration: none;
-  margin: -100px 0 0 250px;
+  margin: 20px 0 0 250px;
 }
 
 
@@ -293,7 +295,7 @@ body {
     margin: 280px 0px 0 -220px;
   }
   .project-next-button {
-    margin: -100px 0 0 100px;
+    margin: 30px 0 0 100px;
   }
 
 /* writing page */
