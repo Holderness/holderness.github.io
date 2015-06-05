@@ -420,16 +420,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 80%;
   }
 
-  h1 {
-    font-size: 132px;
+  .project-about h1 {
+    font-size: 82.5px;
   }
 
-  h3 {
-    font-size: 100px;
+  .project-about h3 {
+    font-size: 62.5px;
   }
 
-  p {
-    font-size: 80px;
+  .project-about p {
+    font-size: 50px;
   }
 
   .project-image {
