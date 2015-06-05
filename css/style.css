@@ -462,9 +462,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   /* fiction view */
 
+  .writing-container {
+    padding: 0;
+  } 
+
   .writing-text-container {
-    margin-top: 50px;
-    width: 86%;
+    margin: 0;
+    width: auto;
+    padding: 0 125px;
   }
 
   .writing-text-container h1 {
@@ -532,105 +537,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-/* top container */
-
-  body {
-    -webkit-text-size-adjust: 100%;
-  }
-
-  #top-container {
-    height: 1044px;
-  }
-
-  .pig-image-container {
-    padding-top: 300px;
-    position: relative;
-  }
-
-  .pig-image {
-    width: 600px;
-  }
-
-
-/* nav */
-  .bold-nav {
-    font-weight: 900;
-    font-size:70px;
-  }
-
-  .nav {
-    text-align: center;
-    font-size: 60px;
-    padding-right: 0;
-  }
-
-  .nav a {
-    text-decoration: none;
-    padding: 0 .5em 0 .5em;
-  }
-
-
-/* links/footer */
-  .link-image {
-    width: 200px;
-  }
-  .link {
-    display: inline-block;
-    padding: 20px 215px 90px 30px;
-  }
-  #link-list-view {
-    position: absolute;
-  }
-
-/* portfolio views */
-
-  .project-about-container {
-    height: 500px
-  }
-
-  .project-about {
-    width: 80%;
-  }
-
-  .project-image {
-    display: block;
-    width: 100%;
-    position: relative;
-    padding-top: 20px;
-    text-align: center;
-  }
-
-  .project-image img {
-     height: auto;
-     width: 600px;
-  }
-
-  .project-next-button {
-    float: left;
-    margin: -230px 0 0 90px;
-  }
-
-  .project-next-button img {
-     position: absolute;
-     width: 100px;
-  }
-
-
-  /* fiction view */
-
-  .writing-text-container {
-    margin-top: 50px;
-    width: 86%;
-  }
-
-  .writing-img-container {
-     display: none;
-  }
-
-
-  #footer {
-    padding-top: 0px;
-  }
 
 
 }
