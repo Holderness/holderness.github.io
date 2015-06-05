@@ -269,6 +269,8 @@ body {
 @media (max-width: 650px) {
 
 
+
+
   #top-container {
     margin: 0;
     width: 450px;
@@ -484,6 +486,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
   and (orientation: portrait) {
 
 /* top container */
+
+  body {
+    font-size: 30px;
+  }
 
   #top-container {
     height: 1044px;
