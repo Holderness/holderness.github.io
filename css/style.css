@@ -383,12 +383,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* nav */
   .bold-nav {
     font-weight: 900;
-    font-size:70px;
+    font-size:30px;
   }
 
   .nav {
     text-align: center;
-    font-size: 60px;
+    font-size: 20px;
     padding-right: 0;
   }
 
@@ -421,15 +421,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   h1 {
-    font-size: 33px;
+    font-size: 15px;
   }
 
   h3 {
-    font-size: 25px;
+    font-size: 12px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .project-image {
