@@ -1,45 +1,45 @@
-var githubLink = new LinkItem( {
+var githubLink = new app.LinkItem( {
   url: "https://github.com/Holderness",
   image: "css/images/github-icon.png"
 });
 
-var linkedinLink = new LinkItem( {
+var linkedinLink = new app.LinkItem( {
   url: "https://www.linkedin.com/in/andersonholderness",
   image: "css/images/linked-in-icon.png"
 });
 
-var mailtoLink = new LinkItem( {
+var mailtoLink = new app.LinkItem( {
   url: "mailto:andersonholderness@gmail.com",
   image: "css/images/mail-icon.png"
 });
 
-var pigcaveLink = new LinkItem( {
+var pigcaveLink = new app.LinkItem( {
   url: "http://pigcave.com",
   image: "css/images/pig-cave.png"
 });
 
-var waiterLink = new LinkItem( {
+var waiterLink = new app.LinkItem( {
   url: "http://192.241.243.100/",
   image: "css/images/waiter-icon.png"
 });
 
-var hangmanglerLink = new LinkItem( {
+var hangmanglerLink = new app.LinkItem( {
   url: "https://hangmanglerhelper.herokuapp.com/",
   image: "css/images/hangmangler-icon.png"
 });
 
-var publicationLink = new LinkItem( {
+var publicationLink = new app.LinkItem( {
   url: "http://www.salttooth.co/p/creative-writing-publications.html",
   image: "css/images/mermaids-purse.png",
   id: "mermaids-purse"
 });
 
-var contactlinkList = new LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
-var writinglinkList = new LinkList([ publicationLink ]);
+var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
+var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
-var pigcaveProject = new Project( {
+var pigcaveProject = new app.Project( {
   title: "Pig Cave",
   subtitle: "Story-creation App",
   description: "This app's foundation is a word-sorting algorithm that pairs similar texts together. The data comes from two websites I scraped and is housed in an API built on Rails. The original images were drawn in Photoshop and animated with Skrollr.js.",
@@ -50,7 +50,7 @@ var pigcaveProject = new Project( {
   githubIcon: "css/images/github-icon.png"
 });
 
-var waiterProject = new Project( {
+var waiterProject = new app.Project( {
   title: "W",
   subtitle: "Restaurant Management CRUD App",
   description: "The system allows users to keep track of orders, tables, and menu items. The design is minimal and tight for quick interaction on mobile devices.",
@@ -61,7 +61,7 @@ var waiterProject = new Project( {
   githubIcon: "css/images/github-icon.png"
 });
 
-var hangmanglerProject = new Project({
+var hangmanglerProject = new app.Project({
   title: "Hangmangler Helper",
   subtitle: "Gaming App",
   description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and existentialism.",
