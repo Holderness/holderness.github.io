@@ -29,7 +29,7 @@ var hangmanglerLink = new app.LinkItem( {
 });
 
 var publicationLink = new app.LinkItem( {
-  url: "http://www.salttooth.co/p/creative-writing-publications.html",
+  url: "#writing",
   image: "css/images/mermaids-purse.png",
   id: "mermaids-purse"
 });
@@ -119,6 +119,8 @@ $(function(){
       $(this).addClass('bold-nav');
     });
   };
+
+
 
 
 

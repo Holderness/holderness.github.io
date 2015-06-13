@@ -46,7 +46,21 @@ var app = app || {};
       }
 
       this.currentView = next;
-    }
+    },
+
+    setPubViewListener: function() {
+      this.$el.on('click', '#mermaids-purse', function() {
+        this.pubView = new app.PubView();
+      });
+    },
+
+    // pubViewToggle: function() {
+    //   if ($('.pub-container') === []) {
+    //     this.writingView = new app.
+    //   }
+    // }
+
+
   });
 
 })(jQuery);

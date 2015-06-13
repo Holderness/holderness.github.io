@@ -15,14 +15,14 @@ var app = app || {};
         className: "contact"});
       app.navLinkListView.goto(this.contactLinkListView);
       this.homeView = new app.HomeView({});
-    // this.contactLinkListView.render();
+      this.boldNavEl('contact');
     },
     portfolio: function(pageRoute) {
       this.portfolioLinkListView = new app.LinkListView({collection: portfoliolinkList,
      className: "portfolio"});
       app.navLinkListView.goto(this.portfolioLinkListView);
       this.pigcaveProjectView = new app.ProjectView({model: pigcaveProject});
-    // this.portfolioLinkListView.render();
+      this.boldNavEl('portfolio');
     },
     project: function(project){
       var projectList = {
@@ -42,7 +42,14 @@ var app = app || {};
       this.writingLinkListView = new app.LinkListView({collection: writinglinkList,
        className: "writing"});
       app.navLinkListView.goto(this.writingLinkListView);
+      app.navLinkListView.setPubViewListener();
+      this.boldNavEl('writing');
+    },
+    boldNavEl: function(nav) {
+      $('#nav').find('.bold-nav').removeClass('bold-nav');
+      $('#' + nav).addClass('bold-nav');
     }
+
   });
 
   app.router = new app.AppRouter();
