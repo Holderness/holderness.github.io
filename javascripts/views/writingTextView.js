@@ -4,17 +4,16 @@ var app = app || {};
 
   app.WritingTextView = Backbone.View.extend({
     el: ".writing-text-container",
-    template: _.template($('script[name="<%= view %>"]').html()),
     initialize: function(options){
       debugger;
-      this.options = options;
-      this.render();
-
+      app.vieww = options;
+      this.render(app.vieww);
     },
-    render: function() {
+    template: _.template($('script[name=' + options + ']').html()),
+    render: function(options) {
       debugger;
       this.$el.empty();
-      this.$el.html(this.template({view: this.options.view})).hide().fadeIn(200);
+      this.$el.html(this.template(options)).hide().fadeIn(200);
     }
   });
 
