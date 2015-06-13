@@ -36,6 +36,7 @@ var app = app || {};
           next.linkCarousel(600, 250, 250, true);
           next.afterRender();
         }, 500);
+        this.setPubViewListener();
       } else if (previous.className === "writing") {
         previous.linkCarousel(500, 0, -250, false);
         setTimeout(function(){
@@ -49,16 +50,32 @@ var app = app || {};
     },
 
     setPubViewListener: function() {
+      this.$el.off('click', '#mermaids-purse');
+      var this_ = this;
       this.$el.on('click', '#mermaids-purse', function() {
-        this.pubView = new app.PubView();
+        this_.pubViewToggle();
       });
+      app.blurbView = true;
     },
 
-    // pubViewToggle: function() {
-    //   if ($('.pub-container') === []) {
-    //     this.writingView = new app.
-    //   }
-    // }
+    pubViewToggle: function() {
+      // app.pubView = app.pubView === 'blurbs' ? 'blurbs' : 'pubs';
+      // if (app.pubView === 'blurbs') {
+      //   debugger;
+      //   new app.WritingTextView({'view': 'pubs'});
+      // } else {
+      //   debugger;
+      //   new app.WritingTextView({'view': 'blurbs'});
+      // }
+      app.blurbView = app.blurbView === false ? true : false;
+      if (app.blurbView) {
+        app.writingText = new app.BlurbView();
+
+      } else {
+        app.writingText = new app.PubView();
+
+      }
+    }
 
 
   });
