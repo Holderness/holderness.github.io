@@ -435,6 +435,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* top container */
 
+ body {
+   position: fixed;
+ }
+
   #top-container {
     height: 1044px;
   }
