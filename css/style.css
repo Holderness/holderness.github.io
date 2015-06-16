@@ -600,7 +600,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }*/
 
   .publication-list li {
-    line-height: 20px;
+    line-height: 45px;
     font-size: 40px;
   }
 
