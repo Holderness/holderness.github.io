@@ -50,7 +50,6 @@ body {
 .project-container {
   min-width: 1100px;
   position: relative;
-  padding-top: 75px;
 }
 
 .project-image {
@@ -480,7 +479,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* portfolio views */
 
   .project-container {
-    padding-top: 0px;
+    padding-top: .5px;
+    min-width: 0;
   }
 
   .project-about-container {
@@ -489,7 +489,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .project-about {
     float: none;
-    height: 1044px;
     width: 80%;
   }
 
