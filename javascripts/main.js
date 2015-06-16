@@ -140,9 +140,9 @@ $(function(){
 // });
 // above code is the same as debouncing
 
-$(window).on('resize', _.debounce(function () {
-    location.reload();
-}, 500));
+// $(window).on('resize', _.debounce(function () {
+//     location.reload();
+// }, 500));
 
 
 

@@ -50,6 +50,7 @@ body {
 .project-container {
   min-width: 1100px;
   position: relative;
+  padding-top: 65px;
 }
 
 .project-image {
@@ -349,6 +350,7 @@ body {
 
   .project-about {
     width: 320px;
+    margin-left: 75px;
   }
 
   .project-image {
@@ -360,21 +362,19 @@ body {
     margin: 280px 0px 0 -245px;
   }
   .project-next-button {
-    margin-left: 100px;
+    margin-left: 85px;
   }
 
 
 
 /* writing page */
-.writing-container {
-  min-width: 450px;
-}
-.writing-img-container {
-  display: none;
-}
-.writing-text-container {
-  margin: 0 20px 0 80px;
-}
+  .writing-container {
+    min-width: 450px;
+  }
+  .writing-img-container {
+    display: none;
+  }
+
 
 
 /* navbar */
@@ -412,8 +412,7 @@ body {
   }
 
   #link-list-view {
-     left: 101px;
-     margin-left: 0px;
+     margin-left: 50px;
      margin-right: 0px;
    }
 
@@ -479,7 +478,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* portfolio views */
 
   .project-container {
-    padding-top: .5px;
+    padding-top: 0px;
     min-width: 0;
   }
 
