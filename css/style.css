@@ -575,8 +575,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .publication-list {
     height: 945px;
   }
-/*
-  .publication-list strong {
+
+/*  .publication-list strong {
     font-weight: 700;
     font-size: 15px;
   }
@@ -584,23 +584,24 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .publication-list strong:hover {
     color: #E18484;
     text-shadow: .7px -.7px #E18484
-  }
+  }*/
 
   .publication-list h4 {
-    font-family: 'Lato', sans-serif;
+/*    font-family: 'Lato', sans-serif;
     margin-top: 14px;
-    margin-bottom: 7px;
+    margin-bottom: 7px;*/
+    font-size: 46px;
   }
 
-  .publication-list ul {
+/*  .publication-list ul {
     list-style: none;
     margin: 0;
     padding-left: 10px;
-  }
+  }*/
 
   .publication-list li {
     line-height: 20px;
-    font-size: 11px;
+    font-size: 40px;
   }
 
   .publication-list a {
@@ -611,7 +612,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     text-decoration: none;
     color: #000;
     text-shadow: .2px -.2px #000;
-  }*/
+  }
 
 
 }
