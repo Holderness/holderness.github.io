@@ -51,11 +51,6 @@ body {
   min-width: 1100px;
   position: relative;
   padding-top: 75px;
-  height: 400px;
-}
-
-.project-about-container {
-
 }
 
 .project-image {
@@ -91,14 +86,14 @@ body {
 
 .project-next-button-container {
   position: absolute;
-  bottom: 0;
-  width: 35%;
+  top: 400px;
+  width: 100%;
 }
 
 .project-next-button {
   position: relative;
   float: left;
-  margin-left: 40%;
+  margin-left: 20%;
 }
 
 
@@ -355,6 +350,7 @@ body {
   .project-container {
     min-width: 450px;
   }
+
   .project-about {
     width: 320px;
   }
@@ -368,7 +364,7 @@ body {
     margin: 280px 0px 0 -245px;
   }
   .project-next-button {
-    margin-left: 10%;
+    margin-left: 100px;
   }
 
 /* writing page */
@@ -488,10 +484,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .project-about-container {
-    height: 500px
+    height: 655px;
   }
 
   .project-about {
+    float: none;
+    height: 1044px;
     width: 80%;
   }
 
@@ -508,25 +506,34 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .project-image {
-    display: block;
-    width: 100%;
-    position: relative;
-    padding-top: 20px;
-    text-align: center;
+    width: auto;
+    /*display: block;*/
+    /*width: 100%;*/
+    /*position: relative;*/
+    /*padding-top: 20px;*/
+    /*text-align: center;*/
   }
 
   .project-image img {
-     height: auto;
-     width: 600px;
+     /*height: auto;*/
+     /*width: 600px;*/
   }
 
   .project-next-button {
-    float: left;
-    margin: -230px 0 0 90px;
+
+  }
+
+
+
+  .project-next-button-container {
+    top: 850px;  
+  }
+
+  .project-next-button {
+     margin-left: 100px;
   }
 
   .project-next-button img {
-     position: absolute;
      width: 100px;
   }
 
