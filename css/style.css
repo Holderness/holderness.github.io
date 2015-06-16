@@ -576,12 +576,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     height: 945px;
   }
 
-/*  .publication-list strong {
+  .publication-list strong {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 43px;
   }
 
-  .publication-list strong:hover {
+/*  .publication-list strong:hover {
     color: #E18484;
     text-shadow: .7px -.7px #E18484
   }*/
