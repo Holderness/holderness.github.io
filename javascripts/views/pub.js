@@ -8,18 +8,18 @@ var app = app || {};
     initialize: function(){
       this.render();
 
-    var $scroller = $(".publication-list");
-    $scroller.bind('touchstart', function (ev) {
-    var $this = $(this);
-    var scroller = $scroller.get(0);
+      var $scroller = $(".publication-list");
+        $scroller.bind('touchstart', function (ev) {
+        var $this = $(this);
+        var scroller = $scroller.get(0);
 
-    if ($this.scrollTop() === 0) $this.scrollTop(1);
-    var scrollTop = scroller.scrollTop;
-    var scrollHeight = scroller.scrollHeight;
-    var offsetHeight = scroller.offsetHeight;
-    var contentHeight = scrollHeight - offsetHeight;
-    if (contentHeight == scrollTop) $this.scrollTop(scrollTop-1);
-});
+        if ($this.scrollTop() === 0) $this.scrollTop(1);
+        var scrollTop = scroller.scrollTop;
+        var scrollHeight = scroller.scrollHeight;
+        var offsetHeight = scroller.offsetHeight;
+        var contentHeight = scrollHeight - offsetHeight;
+        if (contentHeight == scrollTop) $this.scrollTop(scrollTop-1);
+      });
     },
     render: function() {
       this.$el.empty();

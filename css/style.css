@@ -250,7 +250,7 @@ body {
 .nav {
   text-align: center;
   font-size: 1.17em;
-  padding-right: 3.0em;
+  padding-right: 2px;
 }
 
 .nav a {
@@ -342,9 +342,6 @@ body {
     width: 450px;
   }
 
-/* contact page */
-
-
 /*project page*/
 
   .project-container {
@@ -435,9 +432,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* top container */
 
- body {
-   position: fixed;
- }
 
   #top-container {
     height: 1044px;
@@ -456,13 +450,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* nav */
   .bold-nav {
     font-weight: 900;
-    font-size:70px;
+    font-size: 65px;
   }
 
   .nav {
     text-align: center;
-    font-size: 60px;
-    padding-right: 0;
+    font-size: 55px;
+    /*padding-right: 0;*/
   }
 
   .nav a {
@@ -517,6 +511,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 100%;
     /*position: relative;*/
     padding-top: 0px;
+    float: none;
     text-align: right;
   }
   .project-image img {
@@ -582,7 +577,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .publication-list strong {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 38px;
   }
 
 /*  .publication-list strong:hover {
@@ -604,7 +599,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .publication-list li {
     line-height: 45px;
-    font-size: 35px;
+    font-size: 30px;
   }
 
 /*  .publication-list a {
