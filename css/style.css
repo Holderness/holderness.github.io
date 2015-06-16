@@ -367,6 +367,8 @@ body {
     margin-left: 100px;
   }
 
+
+
 /* writing page */
 .writing-container {
   min-width: 450px;
@@ -506,27 +508,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .project-image {
-    width: auto;
+    /*width: auto;*/
     /*display: block;*/
-    /*width: 100%;*/
+    width: 100%;
     /*position: relative;*/
-    /*padding-top: 20px;*/
-    /*text-align: center;*/
+    padding-top: 0px;
+    text-align: right;
   }
-
   .project-image img {
      /*height: auto;*/
-     /*width: 600px;*/
+     width: 600px;
   }
 
-  .project-next-button {
-
-  }
 
 
 
   .project-next-button-container {
-    top: 850px;  
+    top: 700px;  
   }
 
   .project-next-button {
