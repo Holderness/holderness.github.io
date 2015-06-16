@@ -582,7 +582,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .publication-list strong {
     font-weight: 700;
-    font-size: 43px;
+    font-size: 40px;
   }
 
 /*  .publication-list strong:hover {
@@ -604,7 +604,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .publication-list li {
     line-height: 45px;
-    font-size: 40px;
+    font-size: 35px;
   }
 
 /*  .publication-list a {
