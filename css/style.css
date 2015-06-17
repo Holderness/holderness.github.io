@@ -250,7 +250,7 @@ body {
 .nav {
   text-align: center;
   font-size: 1.17em;
-  padding-right: 2px;
+  padding: 0;
 }
 
 .nav a {
@@ -401,7 +401,7 @@ body {
     margin-left: -140px;
   }
   .pig-image {
-    left: 265px;
+    left: 233px;
   }
 
 
@@ -454,7 +454,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .nav {
     text-align: center;
     font-size: 55px;
-    /*padding-right: 0;*/
+    padding: 0;
   }
 
   .nav a {
