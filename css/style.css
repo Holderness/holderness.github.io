@@ -10,6 +10,10 @@ body {
 
 
 
+
+
+
+
 /* home view */
 
 .pig-image-container {
@@ -154,12 +158,16 @@ body {
 
 
 /*pub*/
+.pub-container {
+  position: relative;
 
+}
 .pub-container h1 {
   margin-bottom: 5px;
 }
 
 .publication-list {
+  position: relative;
   height: 350px;
   overflow-y: scroll;
 }
@@ -204,6 +212,45 @@ body {
 ::-webkit-scrollbar { 
     display: none; 
 }
+
+/*bouncing pig on publication list*/
+
+.bar {
+  position:absolute;
+  bottom: 100px;
+  left:75%;
+}
+
+.bounce {
+  position:absolute;
+  margin-top:5px ; 
+  height:50px;
+  width:50px;
+  -webkit-animation:bounce 1.5s infinite;
+}
+
+/*continuous*/
+/*@-webkit-keyframes bounce {
+  0%{margin-top:5px;}
+  25%, 75% {margin-top:17px;}
+  50% {margin-top:10px;}
+  100% {margin-top:5px;}
+}*/
+
+/*with pause*/
+@-webkit-keyframes bounce {
+  0%{margin-top:5px;}
+  10%, 30% {margin-top:17px;}
+  20% {margin-top:10px;}
+  50% {margin-top:5px;}
+}
+
+
+
+
+
+
+
 
 
 
@@ -564,10 +611,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 
-/*
-  .pub-container h1 {
-    margin-bottom: 5px;
-  }*/
+
+
+
+/*publications*/
 
   .publication-list {
     height: 945px;
@@ -578,10 +625,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 38px;
   }
 
-/*  .publication-list strong:hover {
-    color: #E18484;
-    text-shadow: .7px -.7px #E18484
-  }*/
 
   .publication-list h4 {
     margin-top: 50px;
@@ -589,26 +632,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 46px;
   }
 
-/*  .publication-list ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 10px;
-  }*/
 
   .publication-list li {
     line-height: 45px;
     font-size: 30px;
   }
-
-/*  .publication-list a {
-    text-decoration: none;
-  }
-
-  .publication-list a:hover {
-    text-decoration: none;
-    color: #000;
-    text-shadow: .2px -.2px #000;
-  }*/
 
 
 }

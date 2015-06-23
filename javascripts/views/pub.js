@@ -20,6 +20,11 @@ var app = app || {};
         var contentHeight = scrollHeight - offsetHeight;
         if (contentHeight == scrollTop) $this.scrollTop(scrollTop-1);
       });
+
+      $('.publication-list').on('scroll', function() {
+        $(this).parent().find('.bar').css("opacity", 1 - $('.publication-list').scrollTop() / 185);
+      });
+      
     },
     render: function() {
       this.$el.empty();
