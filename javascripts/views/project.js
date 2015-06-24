@@ -13,6 +13,12 @@ var app = app || {};
       var attributes = this.model.toJSON();
       this.$el.html(this.template(attributes)).hide().fadeIn(700);
       this.growProjectNextImageOnHover("100px", -20, -20);
+      $(".owl-carousel").owlCarousel({
+        margin:10,
+        loop:true,
+        autoWidth:true,
+        nav: true,
+      });
     },
     growProjectNextImageOnHover: function(growWidth, marginTop, marginLeft) {
       console.log("growProjectNextImageOnHover loaded");
