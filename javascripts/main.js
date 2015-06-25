@@ -15,12 +15,12 @@ var mailtoLink = new app.LinkItem( {
 
 var pigcaveLink = new app.LinkItem( {
   url: "#portfolio/pigcave",
-  image: "css/images/pig-cave.png"
+  image: "css/images/fly-pig-icon.png"
 });
 
 var bklstLink = new app.LinkItem( {
   url: "#portfolio/bklst",
-  image: "css/images/pig-cave.png"
+  image: "css/images/book-icon.png"
 });
 
 var waiterLink = new app.LinkItem( {
@@ -73,7 +73,7 @@ var pigcaveProject = new app.Project( {
 var bklstProject = new app.Project( {
   title: "BK LST",
   subtitle: "Personal Library App",
-  description: "This sing-page app offers the ability to build your own digital library. Rate, comment, upload book covers, and keep track of the books you read.",
+  description: "This single-page app offers the ability to build your own digital library. Rate, comment, upload book covers, and keep track of the books you read.",
   technologies: "Node.js, Express.js, MongoDB, Mongoose, Multer, AWS, Backbone.js, OAuth",
   images: ["css/images/bklst/bklst.png", "css/images/bklst/register.png", "css/images/bklst/comment.png", "css/images/bklst/addbook.png", "css/images/bklst/sort.png"],
   link: "#portfolio/bklst",
