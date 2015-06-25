@@ -14,19 +14,39 @@ var mailtoLink = new app.LinkItem( {
 });
 
 var pigcaveLink = new app.LinkItem( {
-  url: "http://pigcave.com",
+  url: "#portfolio/pigcave",
+  image: "css/images/pig-cave.png"
+});
+
+var bklstLink = new app.LinkItem( {
+  url: "#portfolio/bklst",
   image: "css/images/pig-cave.png"
 });
 
 var waiterLink = new app.LinkItem( {
-  url: "http://192.241.243.100/",
+  url: "#portfolio/waiter",
   image: "css/images/waiter-icon.png"
 });
 
 var hangmanglerLink = new app.LinkItem( {
-  url: "https://hangmanglerhelper.herokuapp.com/",
+  url: "#portfolio/hangmangler",
   image: "css/images/hangmangler-icon.png"
 });
+
+// var pigcaveLink = new app.LinkItem( {
+//   url: "http://pigcave.com",
+//   image: "css/images/pig-cave.png"
+// });
+
+// var waiterLink = new app.LinkItem( {
+//   url: "http://192.241.243.100/",
+//   image: "css/images/waiter-icon.png"
+// });
+
+// var hangmanglerLink = new app.LinkItem( {
+//   url: "https://hangmanglerhelper.herokuapp.com/",
+//   image: "css/images/hangmangler-icon.png"
+// });
 
 var publicationLink = new app.LinkItem( {
   url: "#writing",
@@ -35,7 +55,7 @@ var publicationLink = new app.LinkItem( {
 });
 
 var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, waiterLink]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, waiterLink, bklstLink ]);
 var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
@@ -44,9 +64,20 @@ var pigcaveProject = new app.Project( {
   subtitle: "Story-creation App",
   description: "This app's foundation is a word-sorting algorithm that pairs similar texts together. The data comes from two websites I scraped and is housed in an API built on Rails. The original images were drawn in Photoshop and animated with Skrollr.js.",
   technologies: "Backbone.js, Skrollr.js, jQuery, Ruby on Rails, JSON, Photoshop",
-  image: "css/images/pig-cave-project.png",
+  images: ["css/images/pigcave/pig-cave-project.png", "css/images/pigcave/owl.png", "css/images/pigcave/laser.png"],
   link: "#portfolio/waiter",
   github: "https://github.com/Holderness/Pig_Cave_JS_Client",
+  githubIcon: "css/images/github-icon.png"
+});
+
+var bklstProject = new app.Project( {
+  title: "BK LST",
+  subtitle: "Personal Library App",
+  description: "This sing-page app offers the ability to build your own digital library. Rate, comment, upload book covers, and keep track of the books you read.",
+  technologies: "Node.js, Express.js, MongoDB, Mongoose, Multer, AWS, Backbone.js, OAuth",
+  images: ["css/images/bklst/bklst.png", "css/images/bklst/register.png", "css/images/bklst/comment.png", "css/images/bklst/addbook.png", "css/images/bklst/sort.png"],
+  link: "#portfolio/bklst",
+  github: "https://github.com/Holderness/O",
   githubIcon: "css/images/github-icon.png"
 });
 
@@ -55,7 +86,7 @@ var waiterProject = new app.Project( {
   subtitle: "Restaurant Management CRUD App",
   description: "The system allows users to keep track of orders, tables, and menu items. The design is minimal and tight for quick interaction on mobile devices.",
   technologies: "Sinatra, jQuery, PostgreSQL",
-  image: "css/images/waiter-project.png",
+  images: ["css/images/waiter-project.png"],
   link: "#portfolio/hangmangler",
   github: "https://github.com/Holderness/Waiter",
   githubIcon: "css/images/github-icon.png"
@@ -66,7 +97,7 @@ var hangmanglerProject = new app.Project({
   subtitle: "Gaming App",
   description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and existentialism.",
   technologies: "Sinatra, jQuery, PostgreSQL, Bcrypt, AJAX",
-  image: "css/images/hangmangler-project.png",
+  images: ["css/images/hangmangler/hangmangler-project.png", "css/images/hangmangler/quinoa.png", "css/images/hangmangler/udders.png","css/images/hangmangler/hangman.png", "css/images/hangmangler/cowturn.png"],
   link: "#portfolio/pigcave",
   github: "https://github.com/Holderness/Hangmangler-Helper",
   githubIcon: "css/images/github-icon.png"

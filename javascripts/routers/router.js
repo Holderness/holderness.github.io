@@ -28,7 +28,8 @@ var app = app || {};
       var projectList = {
         waiter: waiterProject,
         pigcave: pigcaveProject,
-        hangmangler: hangmanglerProject
+        hangmangler: hangmanglerProject,
+        bklst: bklstProject
       };
       this.projectView = new app.ProjectView({model: projectList[project]});
       if (!app.navLinkListView.hasOwnProperty('currentView')) {

@@ -5,20 +5,34 @@ var app = app || {};
   app.ProjectView = Backbone.View.extend({
     el: "#top-container",
     template: _.template($('script[name=projects]').html()),
+    imageTemplate: _.template("<img src=<%= image %>>"),
     initialize: function() {
       this.render();
     },
     render: function() {
       this.$el.empty();
       var attributes = this.model.toJSON();
-      this.$el.html(this.template(attributes)).hide().fadeIn(700);
-      this.growProjectNextImageOnHover("100px", -20, -20);
-      $(".owl-carousel").owlCarousel({
-        margin:10,
-        loop:true,
-        autoWidth:true,
-        nav: true,
+      var this_ = this;
+
+      var images = attributes.images;
+
+      function fade() {
+        $(".owl-carousel").hide().fadeIn(300);
+      }
+
+      this.$el.html(this.template(attributes)).hide().fadeIn(700, function() {
+        $(".owl-carousel").owlCarousel({
+          margin:10,
+          loop:true,
+          autoWidth:true,
+          nav: true,
+          onInitialize: this_.createImages(images),
+          onInitialized: fade,
+        });
       });
+
+      this.growProjectNextImageOnHover("100px", -20, -20);
+
     },
     growProjectNextImageOnHover: function(growWidth, marginTop, marginLeft) {
       console.log("growProjectNextImageOnHover loaded");
@@ -37,7 +51,14 @@ var app = app || {};
           marginLeft: 0
         },600);
       });
+    },
+
+    createImages: function(images) {
+      $.each(images, function(i, image) {
+        $(".owl-carousel").append(this.imageTemplate({image: image}));
+      }.bind(this));
     }
+
   });
 
 })(jQuery);

@@ -10,7 +10,7 @@ var app = app || {};
     },
     render: function() {
       this.$el.empty();
-      this.$el.html(this.template()).hide().fadeIn(700);
+      this.$el.html(this.template()).hide().fadeIn(200);
       app.writingText = new app.BlurbView();
     },
 
