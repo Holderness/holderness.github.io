@@ -405,19 +405,34 @@ body {
   .project-about {
     width: 320px;
     margin-left: 75px;
+    height: 275px;
   }
 
   .project-image {
-    width: 0;
+    float: left;
+    padding-left: 120px;
   }
-  .project-image img {
+
+/*  .project-image {
+    width: 0;
+  }*/
+/*  .project-image img {
     float: left;
     height: 120px;
     margin: 280px 0px 0 -245px;
-  }
-  .project-next-button {
+  }*/
+/*  .project-next-button {
     margin-left: 85px;
+  }*/
+
+  .owl-nav {
+   display: none;
   }
+     .owl-carousel .owl-item img {
+  height: 150px;
+  -webkit-transform-style: preserve-3d;
+  }
+
 
 
 
@@ -445,7 +460,7 @@ body {
     width: 60px;
   }
   #mermaids-purse {
-    padding-left: 67px;
+
   }
   .link {
     display: inline;
@@ -460,15 +475,21 @@ body {
 
 
 
-
+/*  .footer-container {
+    max-width: 440px;
+  }*/
   .footer-container #footer {
-    text-align: left;
+    text-align: center;
   }
 
   #link-list-view {
-     margin-left: 50px;
+    width: 365px;
+     position: absolute;
+     margin-left: 30px;
      margin-right: 0px;
    }
+
+
 
 }
 
@@ -645,6 +666,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     line-height: 45px;
     font-size: 30px;
   }
+
+
+
+
+
 
 
 }
