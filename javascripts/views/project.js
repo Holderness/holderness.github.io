@@ -28,11 +28,12 @@ var app = app || {};
       this.$el.empty().hide().html(this.template(attributes)).fadeIn(700);
 
         $(".owl-carousel").owlCarousel({
-          margin:10,
+          margin:30,
           loop:true,
           autoWidth:true,
           nav: true,
           lazyLoad: true,
+          center: true,
           onInitialize: this_.createImages(images),
         });
 
