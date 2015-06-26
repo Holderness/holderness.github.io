@@ -65,7 +65,7 @@ var pigcaveProject = new app.Project( {
   description: "This app's foundation is a word-sorting algorithm that pairs similar texts together. The data comes from two websites I scraped and is housed in an API built on Rails. The original images were drawn in Photoshop and animated with Skrollr.js.",
   technologies: "Backbone.js, Skrollr.js, jQuery, Ruby on Rails, JSON, Photoshop",
   images: ["css/images/pigcave/pig-cave-project.png", "css/images/pigcave/owl.png", "css/images/pigcave/laser.png"],
-  link: "#portfolio/waiter",
+  link: "http://pigcave.com",
   github: "https://github.com/Holderness/Pig_Cave_JS_Client",
   githubIcon: "css/images/github-icon.png"
 });
@@ -76,7 +76,7 @@ var bklstProject = new app.Project( {
   description: "This single-page app offers the ability to build your own digital library. Rate, comment, upload book covers, and keep track of the books you read.",
   technologies: "Node.js, Express.js, MongoDB, Mongoose, Multer, AWS, Backbone.js, OAuth",
   images: ["css/images/bklst/bklst.png", "css/images/bklst/register.png", "css/images/bklst/comment.png", "css/images/bklst/addbook.png", "css/images/bklst/sort.png"],
-  link: "#portfolio/bklst",
+  link: "https://bklst.herokuapp.com/",
   github: "https://github.com/Holderness/O",
   githubIcon: "css/images/github-icon.png"
 });
@@ -87,7 +87,7 @@ var waiterProject = new app.Project( {
   description: "The system allows users to keep track of orders, tables, and menu items. The design is minimal and tight for quick interaction on mobile devices.",
   technologies: "Sinatra, jQuery, PostgreSQL",
   images: ["css/images/waiter-project.png"],
-  link: "#portfolio/hangmangler",
+  link: "http://192.241.243.100/",
   github: "https://github.com/Holderness/Waiter",
   githubIcon: "css/images/github-icon.png"
 });
@@ -98,7 +98,7 @@ var hangmanglerProject = new app.Project({
   description: "Play hangman or tic-tac-toe in this ASCII art themed gaming app.  It's got talking cows, moving clouds, and existentialism.",
   technologies: "Sinatra, jQuery, PostgreSQL, Bcrypt, AJAX",
   images: ["css/images/hangmangler/hangmangler-project.png", "css/images/hangmangler/quinoa.png", "css/images/hangmangler/udders.png","css/images/hangmangler/hangman.png", "css/images/hangmangler/cowturn.png"],
-  link: "#portfolio/pigcave",
+  link: "https://hangmanglerhelper.herokuapp.com/",
   github: "https://github.com/Holderness/Hangmangler-Helper",
   githubIcon: "css/images/github-icon.png"
 });
