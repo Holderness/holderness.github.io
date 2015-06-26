@@ -10,7 +10,6 @@ var app = app || {};
       this.render();
     },
     render: function() {
-      this.$el.empty().hide();
       var attributes = this.model.toJSON();
       var this_ = this;
 
@@ -19,18 +18,24 @@ var app = app || {};
       function fade() {
         $(".owl-carousel").hide().fadeIn(300);
       }
+
+      $('.link').on('click', function() {
+        if ($('#top-container').is(':animated')) {
+           $('#top-container').stop(true, true);
+         }
+       });
       
-      this.$el.html(this.template(attributes)).fadeIn(700, function() {
-        $(".owl-carousel:hidden").owlCarousel({
+      this.$el.empty().hide().html(this.template(attributes)).fadeIn(700);
+
+        $(".owl-carousel").owlCarousel({
           margin:10,
           loop:true,
           autoWidth:true,
           nav: true,
           lazyLoad: true,
           onInitialize: this_.createImages(images),
-          onInitialized: fade,
         });
-      });
+
 
       // this.growProjectNextImageOnHover("100px", -20, -20);
 

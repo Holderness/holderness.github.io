@@ -167,12 +167,11 @@ http://www.salttooth.co/p/creative-writing-publications.html
 
 
 
-
-
-  // next button
-
       <div class="project-next-button-container">
       <a class="project-next-button" href=<%= link %>>
         <img class="project-next-button-img" src="css/images/next-icon.png">
       </a>
     </div>
+
+  // next button
+
