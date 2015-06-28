@@ -15,9 +15,9 @@ var app = app || {};
 
       var images = attributes.images;
 
-      function fade() {
-        $(".owl-carousel").hide().fadeIn(300);
-      }
+      // function fade() {
+      //   $(".owl-carousel").hide().fadeIn(300);
+      // }
 
       $('.link').on('click', function() {
         if ($('#top-container').is(':animated')) {

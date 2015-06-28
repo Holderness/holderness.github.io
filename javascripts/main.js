@@ -73,7 +73,7 @@ var pigcaveProject = new app.Project( {
 var bklstProject = new app.Project( {
   title: "BK LST",
   subtitle: "Personal Library App",
-  description: "This single-page app offers the ability to build your own digital library. Rate, comment, upload book covers, and keep track of the books you read.",
+  description: "This single-page app offers the ability to build your own digital library. Rate, comment, search, upload book covers: keep track of the books you read.",
   technologies: "Node.js, Express.js, MongoDB, Mongoose, Multer, AWS, Backbone.js, OAuth",
   images: ["css/images/bklst/bklst.png", "css/images/bklst/register.png", "css/images/bklst/comment.png", "css/images/bklst/addbook.png", "css/images/bklst/sort.png"],
   link: "https://bklst.herokuapp.com/",
