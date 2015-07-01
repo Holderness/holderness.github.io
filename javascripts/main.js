@@ -111,7 +111,7 @@ var hangmanglerProject = new app.Project({
 var piqueProject = new app.Project({
   title: "Pique",
   subtitle: "Networking Platform",
-  description: "A discovery platform for professionals who are looking for an effective way to network. Pique users can create a profile and devise and sculpt a list of professional contacts. Users find others based on professional interests, social interests, industry, and more.",
+  description: "A discovery platform for professionals looking for an effective way to network. Pique users can devise and sculpt a list of professional contacts finding others through professional and social interests, industry, and more.",
   technologies: "Ruby on Rails, jQuery, PostgreSQL, Bcrypt, AJAX, Paperclip",
   images: ["css/images/pique/discover_projects1.png", "css/images/pique/discover_projects2.png", "css/images/pique/pique_msg.jpg", "css/images/pique/pique_profile.jpg", "css/images/pique/create_project1.png", "css/images/pique/create_project3.png"],
   link: "javascript:void(0);",
