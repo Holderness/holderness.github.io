@@ -23,14 +23,19 @@ var bklstLink = new app.LinkItem( {
   image: "css/images/book-icon.png"
 });
 
-var waiterLink = new app.LinkItem( {
-  url: "#portfolio/waiter",
-  image: "css/images/waiter-icon.png"
-});
+// var waiterLink = new app.LinkItem( {
+//   url: "#portfolio/waiter",
+//   image: "css/images/waiter-icon.png"
+// });
 
 var hangmanglerLink = new app.LinkItem( {
   url: "#portfolio/hangmangler",
   image: "css/images/hangmangler-icon.png"
+});
+
+var piqueLink = new app.LinkItem( {
+  url: "#portfolio/pique",
+  image: "css/images/pique-icon.png"
 });
 
 // var pigcaveLink = new app.LinkItem( {
@@ -55,7 +60,7 @@ var publicationLink = new app.LinkItem( {
 });
 
 var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, waiterLink, bklstLink ]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, bklstLink, piqueLink]);
 var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
@@ -100,6 +105,17 @@ var hangmanglerProject = new app.Project({
   images: ["css/images/hangmangler/hangmangler-project.png", "css/images/hangmangler/quinoa.png", "css/images/hangmangler/udders.png","css/images/hangmangler/hangman.png", "css/images/hangmangler/cowturn.png"],
   link: "https://hangmanglerhelper.herokuapp.com/",
   github: "https://github.com/Holderness/Hangmangler-Helper",
+  githubIcon: "css/images/github-icon.png"
+});
+
+var piqueProject = new app.Project({
+  title: "Pique",
+  subtitle: "Networking Platform",
+  description: "A discovery platform for professionals who are looking for an effective way to network. Pique users can create a profile and devise and sculpt a list of professional contacts. Users find others based on professional interests, social interests, industry, and more.",
+  technologies: "Ruby on Rails, jQuery, PostgreSQL, Bcrypt, AJAX, Paperclip",
+  images: ["css/images/pique/discover_projects1.png", "css/images/pique/discover_projects2.png", "css/images/pique/pique_msg.jpg", "css/images/pique/pique_profile.jpg", "css/images/pique/create_project1.png", "css/images/pique/create_project3.png"],
+  link: "javascript:void(0);",
+  github: "https://github.com/piqueapp/pique2",
   githubIcon: "css/images/github-icon.png"
 });
 

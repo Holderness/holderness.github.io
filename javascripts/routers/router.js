@@ -26,7 +26,7 @@ var app = app || {};
     },
     project: function(project){
       var projectList = {
-        waiter: waiterProject,
+        pique: piqueProject,
         pigcave: pigcaveProject,
         hangmangler: hangmanglerProject,
         bklst: bklstProject
