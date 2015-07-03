@@ -492,6 +492,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .owl-carousel {
     max-height: 440px;
+    overflow: hidden;
   }
 
 /* top container */
