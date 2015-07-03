@@ -25,6 +25,8 @@ body {
 
 
 
+
+
 /* home view */
 
 .pig-image-container {
@@ -487,6 +489,10 @@ body {
 and (min-device-width: 375px) 
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2) { 
+
+  .owl-carousel {
+    max-height: 440px;
+  }
 
 /* top container */
 
