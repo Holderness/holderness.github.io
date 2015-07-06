@@ -60,12 +60,13 @@ body {
 .slick-list {
   margin-left: -270px;
   left: 50%;
-  overflow: visible;
-  overflow-x: hidden;
+  overflow: visible !important;
+
+
   }
 
   .slick-track {
-   /*overflow: hidden !important;*/
+
   }
 
 /* home view */
@@ -653,6 +654,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 100%;
     height: 400px;
     z-index: 1;
+  }
+
+
+  .slick-list {
+     margin-left: -0px;
+     left: 0%;
+     overflow: hidden !important;
+     height: 250px;
   }
 
 
