@@ -61,6 +61,7 @@ body {
   margin-left: -270px;
   left: 50%;
   overflow: visible;
+  overflow-x: hidden;
   }
 
   .slick-track {

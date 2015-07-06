@@ -24,10 +24,10 @@ var app = app || {};
     },
     owlProjectNav: function() {
       this.$el.slick({
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
         variableWidth: true,
       });
     },
