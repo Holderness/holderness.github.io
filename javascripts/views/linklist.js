@@ -22,6 +22,15 @@ var app = app || {};
         this.growLinkOnHover("130px", -50, -20);
       }
     },
+    owlProjectNav: function() {
+      this.$el.slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        variableWidth: true,
+      });
+    },
     growLinkOnHover: function(growWidth, marginTop, marginLeft) {
       console.log("growLinkOnHover loaded");
       var originalWidth = $('.link-image').width();

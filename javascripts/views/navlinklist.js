@@ -21,6 +21,15 @@ var app = app || {};
           _this.$el.html(next.$el);
           next.linkCarousel(600, 250, 250, true);
           next.afterRender();
+          next.owlProjectNav();
+        }, 500);
+      } else if (next.className === "portfolio" && previous.className === "writing") {
+        previous.linkCarousel(500, 0, -250, false);
+        setTimeout(function(){
+          _this.$el.html(next.$el);
+          next.linkCarousel(600, -250, -250, true);
+          next.afterRender();
+          next.owlProjectNav();
         }, 500);
       } else if (next.className === "contact" && previous.className === "portfolio") {
         previous.linkCarousel(500, 0, -250, false);

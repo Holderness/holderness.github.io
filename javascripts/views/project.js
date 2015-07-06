@@ -27,7 +27,8 @@ var app = app || {};
       
       this.$el.empty().hide().html(this.template(attributes)).fadeIn(700);
 
-        $(".owl-carousel").owlCarousel({
+
+        $(".project-image").owlCarousel({
           margin:30,
           loop:true,
           autoWidth:true,
@@ -38,8 +39,9 @@ var app = app || {};
         });
 
 
-      // this.growProjectNextImageOnHover("100px", -20, -20);
 
+
+      // this.growProjectNextImageOnHover("100px", -20, -20);
     },
     // growProjectNextImageOnHover: function(growWidth, marginTop, marginLeft) {
     //   console.log("growProjectNextImageOnHover loaded");

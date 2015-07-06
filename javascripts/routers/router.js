@@ -37,6 +37,7 @@ var app = app || {};
          className: "portfolio"});
         app.navLinkListView.goto(this.portfolioLinkListView);
       }
+      
     },
     writing: function() {
       this.writingView = new app.WritingView({});

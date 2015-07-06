@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 }
 
-.owl-theme .owl-controls .owl-nav [class*=owl-] {
+.project-image.owl-carousel.owl-theme .owl-controls .owl-nav [class*=owl-] {
   color: #fff;
   font-size: 14px;
   margin: 5px;
@@ -22,8 +22,50 @@ body {
   border-radius: 3px;
 }
 
+.owl-carousel .owl-item img {
+  height: auto;
+  -webkit-transform-style: preserve-3d;
+}
+/*
+#link-list-view.owl-carousel .owl-stage-outer {
+    width: 540px !important;
+    overflow: visible !important;
+  }
+
+  #link-list-view.owl-carousel .owl-stage-outer .owl-stage{
+    width: 540px !important;
+    margin-left: 210px;
+  }
 
 
+#link-list-view.owl-carousel .owl-stage-outer .owl-item {
+  width: 135px !important;
+  }*/
+
+
+.slick-prev:before,
+.slick-next:before {
+   display:none;
+}
+
+/*#link-list-view > div > div > a {
+  width: 10px !important;
+}
+*/
+
+.slick-slide {
+   width: 0px;
+}
+
+.slick-list {
+  margin-left: -270px;
+  left: 50%;
+  overflow: visible;
+  }
+
+  .slick-track {
+   /*overflow: hidden !important;*/
+  }
 
 /* home view */
 
@@ -73,9 +115,10 @@ body {
   width: 55%;
 }
 
-.project-image img {
-  height: 300px;
-  margin-right: 100px;
+.project-image.owl-carousel .owl-item img {
+   height: 400px;
+   margin-right: 100px;
+  -webkit-transform-style: preserve-3d;
 }
 
 .project-about {
@@ -96,9 +139,7 @@ body {
   text-align: left;
 }
 
-
-
-.project-next-button-container {
+/*.project-next-button-container {
   position: absolute;
   top: 400px;
   width: 100%;
@@ -108,10 +149,7 @@ body {
   position: relative;
   float: left;
   margin-left: 20%;
-}
-
-
-
+}*/
 
 .project-about h1 a {
   display: inline;
@@ -124,8 +162,8 @@ body {
 }
 
 
-/* Writing */
 
+/* Writing */
 
 .writing-container {
   padding-top: 65px;
@@ -294,6 +332,8 @@ body {
 
 
 
+
+
 /* nav bar */
 
 .bold-nav {
@@ -385,7 +425,6 @@ body {
 
 
 
-
 @media (max-width: 650px) {
 
 
@@ -419,15 +458,15 @@ body {
 
 
 
-  .owl-nav {
+  .project-image .owl-nav {
    display: none;
   }
-  .owl-carousel .owl-item img {
+  .project-image.owl-carousel .owl-item img {
     height: 140px;
     -webkit-transform-style: preserve-3d;
   }
 
-  .owl-carousel .owl-stage-outer {
+  .project-image.owl-carousel .owl-stage-outer {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -485,6 +524,23 @@ body {
      position: absolute;
      margin-left: 30px;
      margin-right: 0px;
+  }
+/*
+  #link-list-view.owl-carousel .owl-item img {
+    height: auto;
+  }
+
+  #link-list-view.owl-carousel .owl-item {
+    width: 0;
+  }*/
+
+
+
+  .slick-list {
+  margin-left: -173px;
+  left: 50%;
+  overflow-x: visible;
+  overflow-y: visible;
   }
 
 
@@ -586,11 +642,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
      margin: 30px;
    }
 
-  .owl-nav {
+  .project-image .owl-nav {
    display: none;
   }
 
-  .owl-carousel .owl-stage-outer {
+  .project-image.owl-carousel .owl-stage-outer {
     overflow: hidden;
     position: relative;
     width: 100%;
