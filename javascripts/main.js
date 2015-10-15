@@ -53,6 +53,11 @@ var piqueLink = new app.LinkItem( {
 //   image: "css/images/hangmangler-icon.png"
 // });
 
+var chjatLink = new app.LinkItem( {
+  url: "#portfolio/chjat",
+  image: "css/images/chjat-icon.png"
+});
+
 var publicationLink = new app.LinkItem( {
   url: "#writing",
   image: "css/images/mermaids-purse.png",
@@ -60,7 +65,7 @@ var publicationLink = new app.LinkItem( {
 });
 
 var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, bklstLink, piqueLink]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, bklstLink, piqueLink, chjatLink]);
 var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
@@ -119,10 +124,30 @@ var piqueProject = new app.Project({
   githubIcon: "css/images/github-icon.png"
 });
 
+var chjatProject = new app.Project({
+  title: "Chjat",
+  subtitle: "Real-Time Chat Application",
+  description: "Chat instantly through this lightweight app. Create and personalize a chatroom or talk directly to another user. Chjat uses Socket.io for lightning fast communication, AWS for image and gif storage, and MongoDB to save all your conversations.",
+  technologies: "Node.js, Express.js, Socket.io, Mongodb, Backbone.js, AWS, Gulp.js, SASS, OAuth",
+  images: [
+    "css/images/chjat/register.png",
+    "css/images/chjat/chatroom.png",
+    "css/images/chjat/chatroom-image.png",
+    "css/images/chjat/image-upload.png",
+    "css/images/chjat/invitation.png",
+    "css/images/chjat/mobile-chatroom.png",
+    "css/images/chjat/mobile-slide-screen.png",
+    "css/images/chjat/mobile-modal.png",
+  ],
+  link: "http://www.chjat.com",
+  github: "https://github.com/Holderness/Chjat",
+  githubIcon: "css/images/github-icon.png"
+});
+
+
+
 
 $(function(){
-
-
 
   var blinkityPig = function blinkityPig(){
     setTimeout(function(){

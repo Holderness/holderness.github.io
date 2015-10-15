@@ -29,7 +29,8 @@ var app = app || {};
         pique: piqueProject,
         pigcave: pigcaveProject,
         hangmangler: hangmanglerProject,
-        bklst: bklstProject
+        bklst: bklstProject,
+        chjat: chjatProject
       };
       this.projectView = new app.ProjectView({model: projectList[project]});
       if (!app.navLinkListView.hasOwnProperty('currentView')) {
