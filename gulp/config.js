@@ -30,12 +30,12 @@ module.exports = {
     dest: dest,
     filename: "main.css"
   },
-  scss: {
+  less: {
     src: [
-    'scss/*.scss'
+    'public/less/*.less'
     ],
     dest: dest,
-    filename: "sass.css"
+    filename: "less.css"
   },
   browserSync: {
     server: {
