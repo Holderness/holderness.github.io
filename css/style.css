@@ -58,12 +58,10 @@ body {
 }
 
 .slick-list {
-  margin-left: -270px;
+  margin-left: -335px;
   left: 50%;
-  overflow: visible !important;
-
-
-  }
+  overflow: visible;
+}
 
   .slick-track {
 

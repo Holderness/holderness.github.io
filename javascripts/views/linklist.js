@@ -14,6 +14,7 @@ var app = app || {};
       this.$el.html(container);
       return this;
     },
+    // transfer this to css
     afterRender: function() {
       console.log('after render:');
       if ($(window).width() < 650) {
