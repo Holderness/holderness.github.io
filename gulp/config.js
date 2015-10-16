@@ -35,7 +35,7 @@ module.exports = {
     'public/less/*.less'
     ],
     dest: dest,
-    filename: "less.css"
+    filename: "./less.css"
   },
   browserSync: {
     server: {

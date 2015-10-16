@@ -345,35 +345,6 @@
 
 
 
-/* elements */
-
-a, a:active, a:focus {
-  outline: none;
-}
-
-a:link {
-  color: #000;
-}
-
-a:visited {
-  color: #000;
-}
-
-a:hover {
-  color: #E18484;
-  text-shadow: .7px -.7px #E18484
-}
-
-body {
-  min-width: 450px;
-  color: #000000;
-  font-family: 'Forum', futura;
-  font-size: 16px;
-  background-color: whitesmoke;
-}
-
-
-
 
 /* animations */
 
