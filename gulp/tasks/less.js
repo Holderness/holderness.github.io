@@ -14,9 +14,18 @@ gulp.task('less', function() {
   return gulp.src(config.less.src)
     .pipe(concat(config.less.filename))
     .pipe(sourcemaps.init())
-      .pipe(less({
+      .pipe(less(
+      {
         plugins: [autoprefix, cleancss]
-      }))
+      }
+      ))
+      .on('error', gutil.log)
       .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.less.dest));
 });
+
+function swallowError (error) {
+
+  console.log(error.toString());
+
+}
