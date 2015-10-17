@@ -18,24 +18,27 @@ module.exports = {
     ],
     dest: dest,
     vendorfile: "vendor.js",
-    filename: "main.js"
+    filename: "main.js",
   },
   css: {
+    vendor: [
+      'public/css/vendor/owl.carousel.css',
+      'public/css/vendor/slick.css',
+      'public/css/vendor/normalize.css',
+    ],
     src: [
-      'css/owl.carousel.css',
-      'css/slick.css',
-      'css/normalize.css',
       'css/style.css',
     ],
     dest: dest,
-    filename: "main.css"
+    filename: "main.css",
+    vendorfile: "vendor.css",
   },
   less: {
     src: [
-    'public/less/*.less'
+    'public/less/*.less',
     ],
     dest: dest,
-    filename: "./less.css"
+    filename: "style.css",
   },
   browserSync: {
     server: {

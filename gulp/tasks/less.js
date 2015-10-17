@@ -12,8 +12,8 @@ var LessPluginCleanCSS = require('less-plugin-clean-css'),
 
 gulp.task('less', function() {
   return gulp.src(config.less.src)
+    .pipe(concat(config.less.filename))
     .pipe(sourcemaps.init())
-      // .pipe(concat(config.less.filename))
       .pipe(less({
         plugins: [autoprefix, cleancss]
       }))

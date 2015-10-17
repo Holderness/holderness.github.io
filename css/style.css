@@ -24,21 +24,6 @@
   height: auto;
   -webkit-transform-style: preserve-3d;
 }
-/*
-#link-list-view.owl-carousel .owl-stage-outer {
-    width: 540px !important;
-    overflow: visible !important;
-  }
-
-  #link-list-view.owl-carousel .owl-stage-outer .owl-stage{
-    width: 540px !important;
-    margin-left: 210px;
-  }
-
-
-#link-list-view.owl-carousel .owl-stage-outer .owl-item {
-  width: 135px !important;
-  }*/
 
 
 .slick-prev:before,

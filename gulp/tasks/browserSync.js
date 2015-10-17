@@ -9,7 +9,7 @@ gulp.task('browsersync', function() {
             baseDir: "./"
         }
     });
-    gulp.watch("../../*.html").on("change", browserSync.reload);
+    gulp.watch("*.html", ['html-watch']);
     gulp.watch(config.css.src, ['css-watch']);
     gulp.watch(config.js.src, ['js-watch']);
     gulp.watch(config.less.src, ['less-watch']);
@@ -24,5 +24,9 @@ gulp.task('css-watch', ['css'], function() {
 });
 
 gulp.task('less-watch', ['less'], function() {
+  browserSync.reload();
+});
+
+gulp.task('html-watch', [], function() {
   browserSync.reload();
 });
