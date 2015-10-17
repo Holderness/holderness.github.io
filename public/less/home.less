@@ -23,10 +23,24 @@
       visibility: hidden;
     }
   }
+  // small
   @media (max-width: 650px) {
     margin-left: -140px;
     .pig-image {
       left: 233px;
+    }
+  }
+  // iphone 6
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .pig-image-container {
+      padding-top: 300px;
+      position: relative;
+      .pig-image {
+        width: 600px;
+      }
     }
   }
 }

@@ -34,6 +34,27 @@
       display: none;
     }
   }
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    min-width: 0;
+    padding: 0;
+    .writing-text-container {
+      margin: 0;
+      width: 80%;
+      padding: 0 85px;
+      h1 {
+        font-size: 67px;
+      }
+      p {
+        font-size: 40px;
+      }
+    }
+    .writing-img-container {
+      display: none;
+    }
+  }
 }
 
 
