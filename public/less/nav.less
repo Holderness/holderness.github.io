@@ -1,23 +1,24 @@
 
 // nav bar
 
-.bold-nav {
-  font-weight: 900;
-  font-size:1.3em;
-}
-
 .nav {
   text-align: center;
   font-size: 1.17em;
   padding: 0;
+  li {
+    display: inline;
+    a {
+      text-decoration: none;
+      padding: 0 .5em 0 .5em;
+      &.bold-nav {
+        font-weight: 900;
+        font-size:1.3em;
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    text-align: left;
+    font-size: 1.17em;
+    padding-left: 80px;
+  }
 }
-
-.nav a {
-  text-decoration: none;
-  padding: 0 .5em 0 .5em;
-}
-
-.nav li {
-  display: inline;
-}
-

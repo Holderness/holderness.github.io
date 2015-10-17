@@ -36,7 +36,7 @@ module.exports = {
   less: {
     src: [
       'public/less/*.less',
-      // 'public/less/media/*.less',
+      'public/less/media/*.less',
     ],
     dest: dest,
     filename: "style.css",
