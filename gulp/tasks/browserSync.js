@@ -19,9 +19,9 @@ gulp.task('js-watch', ['js'], function() {
   browserSync.reload();
 });
 
-gulp.task('css-watch', ['css'], function() {
-  browserSync.reload();
-});
+// gulp.task('css-watch', ['css'], function() {
+//   browserSync.reload();
+// });
 
 gulp.task('less-watch', ['less'], function() {
   browserSync.reload();
