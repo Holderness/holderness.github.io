@@ -18,8 +18,8 @@ var pigcaveLink = new app.LinkItem( {
   image: "public/images/fly-pig-icon.png"
 });
 
-var bklstLink = new app.LinkItem( {
-  url: "#portfolio/bklst",
+var justokayreadsLink = new app.LinkItem( {
+  url: "#portfolio/justokayreads",
   image: "public/images/book-icon.png"
 });
 
@@ -65,7 +65,7 @@ var publicationLink = new app.LinkItem( {
 });
 
 var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, bklstLink, piqueLink, chjatLink]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, justokayreadsLink, piqueLink, chjatLink]);
 var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
@@ -80,13 +80,13 @@ var pigcaveProject = new app.Project( {
   githubIcon: "public/images/github-icon.png"
 });
 
-var bklstProject = new app.Project( {
-  title: "BK LST",
+var justokayreadsProject = new app.Project( {
+  title: "Justokayreads",
   subtitle: "Personal Library App",
   description: "This single-page app offers the ability to build your own digital library. Rate, comment, search, upload book covers: keep track of the books you read.",
   technologies: "Node.js, Express.js, MongoDB, Mongoose, Multer, AWS, Backbone.js, OAuth",
-  images: ["public/images/bklst/bklst.png", "public/images/bklst/register.png", "public/images/bklst/comment.png", "public/images/bklst/addbook.png", "public/images/bklst/sort.png"],
-  link: "https://bklst.herokuapp.com/",
+  images: ["public/images/justokayreads/justokayreads.png", "public/images/justokayreads/register.png", "public/images/justokayreads/comment.png", "public/images/justokayreads/addbook.png", "public/images/justokayreads/sort.png"],
+  link: "https://justokayreads.herokuapp.com/",
   github: "https://github.com/Holderness/O",
   githubIcon: "public/images/github-icon.png"
 });
@@ -128,7 +128,7 @@ var chjatProject = new app.Project({
   title: "Chjat",
   subtitle: "Real-Time Chat Application",
   description: "Chat instantly through this lightweight app. Create and personalize a chatroom or talk directly to another user. Chjat uses Socket.io for lightning fast communication, AWS for image and gif storage, and MongoDB to save all your conversations.",
-  technologies: "Node.js, Express.js, Socket.io, Mongodb, Backbone.js, AWS, Gulp.js, SASS, OAuth",
+  technologies: "Node.js, Express.js, Socket.io, Mongodb, Backbone.js, AWS, Gulp.js, SCSS, OAuth",
   images: [
     "public/images/chjat/register.png",
     "public/images/chjat/chatroom.png",

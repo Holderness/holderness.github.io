@@ -29,7 +29,7 @@ var app = app || {};
         pique: piqueProject,
         pigcave: pigcaveProject,
         hangmangler: hangmanglerProject,
-        bklst: bklstProject,
+        justokayreads: justokayreadsProject,
         chjat: chjatProject
       };
       this.projectView = new app.ProjectView({model: projectList[project]});
