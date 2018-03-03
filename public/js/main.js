@@ -65,7 +65,7 @@ var publicationLink = new app.LinkItem( {
 });
 
 var contactlinkList = new app.LinkList([ githubLink, linkedinLink, mailtoLink ]);
-var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, justokayreadsLink, piqueLink, chjatLink]);
+var portfoliolinkList = new app.LinkList([ pigcaveLink, hangmanglerLink, justokayreadsLink, piqueLink, chjatLink ]);
 var writinglinkList = new app.LinkList([ publicationLink ]);
 
 
