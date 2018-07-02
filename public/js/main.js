@@ -60,7 +60,7 @@ var chjatLink = new app.LinkItem( {
 
 var publicationLink = new app.LinkItem( {
   url: "#writing",
-  image: "public/images/mermaids-purse.png",
+//  image: "public/images/mermaids-purse.png",
   id: "mermaids-purse"
 });
 
