@@ -2,7 +2,7 @@
 
 .writing-container {
   padding-top: 65px;
-  min-width: 1280px;
+  width: 1330px;
   overflow: hidden;
   .writing-text-container {
     float: right;
@@ -11,7 +11,7 @@
     min-width: 336px;
   }
   .writing-img-container {
-    width: 320px;
+    float: left;
     padding-left: 120px;
     img {
       height: 400px;
@@ -29,9 +29,14 @@
     }
   }
   @media (max-width: 650px) {
-    min-width: 450px;
+    width: 450px;
     .writing-img-container {
-      display: none;
+      margin: 80px 60px 0 60px;
+      padding-left: 0px;
+      img {
+        height: 130px;
+        padding-left: 68px;
+      }
     }
   }
   @media only screen 
@@ -45,6 +50,7 @@
       width: 80%;
       padding: 0 85px;
       h1 {
+        margin: 40px 0 0 0;
         font-size: 67px;
       }
       p {
@@ -52,9 +58,54 @@
       }
     }
     .writing-img-container {
-      display: none;
+      margin: 150px 145px;
+      padding-left: 0px;
+      .writing-img-footer {
+        padding-left: 100px;
+        margin-top: 10px;
+        font-size: 28px;
+      }
+      img {
+        height: 640px;
+        padding-left: 102px;
+      }
     }
   }
+
+
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    min-width: 0;
+    padding: 0;
+    .writing-text-container {
+      margin: 0;
+      width: 80%;
+      padding: 0 85px;
+      h1 {
+        margin: 40px 0 0 0;
+        font-size: 67px;
+      }
+      p {
+        font-size: 40px;
+      }
+    }
+    .writing-img-container {
+      margin: 150px 145px;
+      padding-left: 0px;
+      .writing-img-footer {
+        padding-left: 100px;
+        margin-top: 10px;
+        font-size: 28px;
+      }
+      img {
+        height: 640px;
+        padding-left: 102px;
+      }
+    }
+  }
+
 }
 
 

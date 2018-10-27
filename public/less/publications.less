@@ -3,17 +3,18 @@
   position: relative;
   h1 {
     margin-bottom: 5px;
+    margin-top: 0px;
   }
   .bar {
-    position:absolute;
-    bottom: 100px;
-    left:75%;
+    position: absolute;
+    bottom: 50px;
+    left: 75%;
     .bounce {
-      position:absolute;
-      margin-top:5px ; 
-      height:50px;
-      width:50px;
-      -webkit-animation: bounce 1.5s infinite;
+      position: absolute;
+      margin-top: 5px ; 
+      height: 50px;
+      width: 50px;
+      -webkit-animation: bounce 6s infinite;
     }
   }
   .publication-list {
@@ -22,7 +23,6 @@
     overflow-y: scroll;
     strong {
       font-weight: 700;
-      font-size: 15px;
       &:hover {
         color: #E18484;
         text-shadow: .7px -.7px #E18484
@@ -38,29 +38,41 @@
       margin: 0;
       padding-left: 10px;
       li {
-        line-height: 20px;
-        font-size: 11px;
         a {
+          font-size: 14px;
           text-decoration: none;
-          &:hover {
-            text-decoration: none;
-            color: #000;
-            text-shadow: .2px -.2px #000;
-          }
+        }
+        &:hover {
+          text-decoration: none;
+          color: #000;
+          text-shadow: .2px -.2px #000;
         }
       }
     }
   }
+  @media (max-width: 650px) {
+    width: 450px;
+    .bar {
+      bottom: 20px;
+    }
+  }
+
   /* iphone 6 */
   @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) {
+    .bar {
+      bottom: 120px;
+    }
     .publication-list {
       height: 945px;
       strong {
         font-weight: 700;
         font-size: 38px;
+      }
+      span {
+        font-size: 24px;
       }
       h4 {
         margin-top: 50px;
@@ -68,8 +80,8 @@
         font-size: 46px;
       }
       li {
-        line-height: 45px;
-        font-size: 30px;
+        // line-height: 45px;
+        font-size: 50px;
       }
     }
   }
@@ -87,11 +99,19 @@
 }*/
 
 /*with pause*/
-@-webkit-keyframes bounce {
-  0%{margin-top:5px;}
-  10%, 30% {margin-top:17px;}
-  20% {margin-top:10px;}
-  50% {margin-top:5px;}
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: linear;
 }
+
+@keyframes bounce {
+    0%       { transform: translateY(5px); }
+    2%, 6%   { transform: translateY(17px); }
+    4%       { transform: translateY(10px); }
+    10%      { transform: translateY(0px); }
+
+}
+
+
 
 

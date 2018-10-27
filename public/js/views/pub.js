@@ -22,7 +22,7 @@ var app = app || {};
       });
 
       $('.publication-list').on('scroll', function() {
-        $(this).parent().find('.bar').css("opacity", 1 - $('.publication-list').scrollTop() / 185);
+        $(this).parent().find('.bar').css("opacity", 1 - $('.publication-list').scrollTop() / 80);
       });
       
     },
