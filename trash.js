@@ -1,6 +1,34 @@
 trash.js
 
 
+
+<div>
+  <h4>Poetry</h4>
+  <ul>
+    <li><a href="http://mandala.uga.edu/recon/poet-trip-recon.php"><strong>Trip the Light Fantastic</strong><span> – Mandala Journal – Reconciliation Issue</span></a></li>
+  </ul>
+</div>
+<div>
+  <h4>Blog Posts</h4>
+  <ul>
+    <li><a href="http://mandalajournalblog.tumblr.com/post/13594096657/charge-by-anderson-holderness"><strong>Charge</strong><span> – Mandala Journal Blog</span></a></li>
+  </ul>
+</div>
+<div>
+  <h4>Photography</h4>
+  <ul>
+    <li><a href="http://mandala.uga.edu/exodus/art-mrplastic-exodus.php"><strong>Mr. Plastic Bag Head</strong><span> – Mandala Journal – Exodus Issue</span></a></li>
+    <li><a href="http://mandala.uga.edu/cosmo/art-churning-cosmo.php"><strong>Churning</strong><span> – Mandala Journal – Cosmopolitanism Issue</span></a></li>
+  </ul>
+
+</div>
+
+
+<li><a href="http://mandala.uga.edu/cosmo/fic-guillermo-cosmo.php"><strong>Guillermo</strong><span> – Mandala Journal – Cosmopolitanism Issue</span></a></li>
+<li><a href="http://mandala.uga.edu/recon/fic-teeth-recon.php"><strong>Third Set of Teeth</strong><span> – Mandala Journal – Reconciliation Issue</span></a></li>
+<li><a href="http://mandala.uga.edu/bridges/fic-noodle-bridges.php"><strong>The Noodle</strong><span> – Mandala Journal – Bridges Issue</span></a></li>
+
+
       <a class="link" href="https://github.com/Holderness">
         <img class="link-image" src="css/images/github-icon.png" alt="Github:Holderness">
       </a>
@@ -34,7 +62,7 @@ trash.js
       </a>
 
 
-      
+
       var images = $(".footer").find("img");
       $.each(images, function(i, el){
       	var elleft = $(el).offset().left;
@@ -90,7 +118,7 @@ trash.js
     });
     return totalWidth;
   };
-  
+
   app.linkListViewWidth = linkListViewWidth();
 
 
@@ -147,9 +175,9 @@ trash.js
 http://www.salttooth.co/p/creative-writing-publications.html
 
   <script type="text/javascript">
-    var sc_project=10326034; 
-    var sc_invisible=1; 
-    var sc_security="80bbaded"; 
+    var sc_project=10326034;
+    var sc_invisible=1;
+    var sc_security="80bbaded";
     var scJsHost = (("https:" == document.location.protocol) ?
       "https://secure." : "http://www.");
        document.write("<sc"+"ript type='text/javascript' src='" +
@@ -174,4 +202,3 @@ http://www.salttooth.co/p/creative-writing-publications.html
     </div>
 
   // next button
-

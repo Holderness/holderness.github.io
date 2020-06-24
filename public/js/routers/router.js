@@ -8,7 +8,7 @@ var app = app || {};
       "contact": "contact",
       "portfolio": "portfolio",
       "portfolio/:project": "project",
-      "writing": "writing"
+      "writing": "writing",
     },
     contact: function() {
       this.contactLinkListView = new app.LinkListView({collection: contactlinkList,
@@ -38,7 +38,7 @@ var app = app || {};
          className: "portfolio"});
         app.navLinkListView.goto(this.portfolioLinkListView);
       }
-      
+
     },
     writing: function() {
       this.writingView = new app.WritingView({});
